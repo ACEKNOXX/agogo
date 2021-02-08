@@ -1,0 +1,7 @@
+.login-modal{
+    width:350px;border-radius:30px;max-height: 100%; 
+    overflow: visible;background: #FEFEFE !important;
+}
+.login-modal>.login-modal,#login-form{
+    height:750 !important;
+}

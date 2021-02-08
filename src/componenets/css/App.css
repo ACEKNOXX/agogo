@@ -1,0 +1,21 @@
+
+.green-hr-line{margin-top:-20px;width:25px;border:10px;border-radius:3px;height:5px;margin-left:15px;}
+.ft-h6-1{font-size:22px;}.subscibe-input{font-size:15px !important; border:1px solid #eee;width:250px;padding:2px 8px;border-radius:5px;color:#eee !important;}
+.ft-h6-2{font-size:25px;}.ft-subscribe-3{font-size:15px !important; border:1px solid #eee;width:250px;padding:2px 8px;border-radius:5px;color:#eee !important;}
+.ft-subscribe-btn{height:45px; border-radius: 8px;}
+.signUpHero{
+    background-image:url('./../../assets/Aurora_images/homepage hero image-min.png') !important;
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    width:100%; 
+    height:600px!important; 
+
+}
+.alert-err{
+  border-radius: 5px;
+  background:#e57373;
+}
+.alert-succes{
+
+}

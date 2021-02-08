@@ -1,0 +1,227 @@
+:root {
+--primary: #002044;
+--secondary: #009649;
+--orange:#EF8836;
+--pink: #D8143A;
+--orangeFade:#FBD56F;
+--paleGreen:#E5F4ED;
+}
+/* @font-face {
+font-family: Gordita;
+src: url('assets/fonts/Gordita Regular.otf');
+} */
+/* @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+*{
+  font-family: 'Didact Gothic', sans-serif;
+} */
+.primary-text{
+    color:#002044;
+}
+.bg-primary{
+    background-color:#002044;
+}
+/* Spacing */
+.mlr-2{
+    margin:0px 10px 0px 10px;
+}
+
+.tabs .tab a{
+    color:green;
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+    background-color:#eee;
+    color:green;
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+    /* background-color:#c8e6c9; */
+    color:green;
+    /* border-bottom:2px solid green; */
+    
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+    /* background-color:#c8e6c9; */
+    border-bottom:2px solid green;
+} 
+.tab{
+    border-bottom:2px solid #eee ;
+}
+.tab-container{
+    width:100% !important;
+}
+.pl-25{padding-left:25px;}
+.pl-50{padding-left:50px;}
+.pl-100{padding-left:100px;}
+.pl-120{padding-left:120px;}
+.pb-25{padding-bottom:25px;}
+.pb-50{padding-bottom:50px;}
+.pb-100{padding-bottom:100px;}
+.pb-120{padding-bottom:120px;}
+.pt-25{padding-top:25px;}
+.pt-50{padding-top:50px;}
+.pt-100{padding-top:100px;}
+.pt-120{padding-top:120px;}
+.mt-25{margin-top:25px;}
+.mt-50{margin-top:50px;}
+.mt-100{margin-top:100px;}
+.mt-120{margin-top:120px;}
+.mb-25{margin-bottom:25px;}
+.mb-50{margin-bottom:50px;}
+.mb-100{margin-bottom:100px;}
+.mb-120{margin-bottom:120px;}
+
+/* Spacing */
+
+/* Fonts */
+
+/* FOnts */
+.index-banner-header{
+    position: absolute;
+    width: 450px;
+    font-style: normal;
+    font-weight:980 !important;
+    font-size: 58px;
+    line-height: 68px;
+    color: #FAFAFA;
+}
+.index-banner-header-article{
+    position: absolute;
+    width: 520px;
+    top: 380px;
+    /* font-family: Gordita;
+    font-style: normal; */
+    /* font-weight: n; */
+    font-size: 18px;
+    line-height: 174.9%;
+    color: #FAFAFA;
+}
+.section-heading>#section-heading-main{
+    width:80% !important;
+    margin:0px auto !important;
+    border:2px dashed red !important;
+}
+#section-heading-main-h{
+    margin-bottom:-25px !important;
+}
+
+.outline{
+    border:1px solid #009649 !important;
+    background:#fff !important;
+    color: #009649;
+}
+
+.container{
+    margin:0px auto !important;
+    width:90% !important;
+}
+/* Header */
+.nav-wrapper>.brand-logo>img{
+    margin-top:10px;
+}
+.destop-nav{
+    width:80%; height:53px;
+}
+/* Header end */
+
+/* buttons  */
+.nav-wrapper>ul>li>{
+    color:#333;
+}
+.btn,.btn-large,.btn-small,.btn-medium,.btn-flat{
+    text-transform: capitalize;
+}
+.btn-primary{
+    border:2px solid #009649 !important;
+    opacity:0.8;
+    color: #009649;
+    border-radius:6px !important;
+    padding:0px 30px;
+    height:40px !important;
+
+}
+.btn-primary:hover,.outline{
+    background:#009649 !important;
+    color:#fff;
+}
+.btn-large-primary{
+    min-width:250px !important;
+    border-radius:5px !important;
+    padding-bottom:10px;
+}
+/* end butons */
+
+
+/* Footer */
+.footer-nav>a>h6{
+    margin:16px 0px 0px !important;
+}
+footer>.footer{
+    min-height:300px;
+    background:var(--primary);
+}
+.footer-copyright{
+    padding-top:30px;
+    min-height:100px!important;
+    background:var(--primary);  
+}
+/* Footer Ends */
+
+.banner-index{
+    background: var(--primary);
+}
+
+.home-page-banner-image{
+    /* margin-left:10%; */
+    width: 100%; 
+    height:400px;
+    /* background:url("assets/Aurora_images/homepage hero image-min.png") !important; */
+    background-repeat: no-repeat;
+    background-position:center left;
+    background-size:fit;
+}
+.home-page-banner-image>img{
+    border-radius:20px;
+
+}
+.b{
+    border:2px dashed red !important;
+}
+
+
+.banner-index>.banner-row-one>div{
+    height:450px;
+    /* width:400px; */
+    border:2px dashed red;
+
+}
+.banner-row-two>.learn-with-section>.col>.card-panel{
+    border-radius:30px;
+    height:280px;
+}
+
+.course-cards>.col>.card{
+border-radius:20px;
+}
+
+.form-section-1>.col {
+padding-top:0px !important;
+}
+.form-section-1>.col>input{
+    font-size:15px !important;
+    border:1px solid grey;
+    padding:2px 0px 8px 5px;
+    border-radius:5px;
+}
+
+modal-footer{
+    border-radius:20px !important;
+}
+
+.alittle-text-header{
+    width:400px;
+    min-height:60px;
+    margin:0px auto !important;
+}

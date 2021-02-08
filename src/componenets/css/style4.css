@@ -1,0 +1,55 @@
+.card-img-learn-with{
+    width:80px;height:80px;margin:0px auto;
+}
+.banner-index-holder{
+    height:400px !important;
+}
+.popular-course-cards>.card-image>img{
+border-radius:20px 20px 0px 0px;
+/* border:2px dashed red; */
+
+}
+.popular-course-cards>.card-content>.card-heading>.card-context-head-stats{
+    width:210px; 
+    display:flex;
+    justify-content:space-between;
+    /* border:2px dashed red; */
+}
+.card-context-body-details{
+    padding-top:20px;padding-bottom:25px;height:160px;
+    /* border:2px dashed red; */
+
+}
+
+.about-banner{
+/* background:url("assets/Aurora_images/About\ us\ image\ hero\ image-min.png"); */
+background-repeat: no-repeat;
+/* background-position: bottom; */
+width: 100%;
+height: 600px;
+}
+.about-hero-right{
+background:url("./../../assets/Aurora_images/About us page image 2-min.png") !important;
+background-repeat: no-repeat;
+background-position:left center;
+background-size:cover;
+width: 100%;
+height: 600px;
+}
+.about-hero-overlay,.about-hero-overlay-2{
+background-image: linear-gradient(-90deg,#002044,rgb(4, 9, 14));
+position: absolute;
+min-height:600px;
+width:100%;
+opacity:0.4;
+}
+.about-hero-overlay-2{
+opacity:0.9;
+background-image: linear-gradient(-90deg,rgb(4, 9, 14),#002044);
+}
+
+.about-hero-content{
+position: absolute;
+z-index:1;
+margin:0px auto !important;
+}

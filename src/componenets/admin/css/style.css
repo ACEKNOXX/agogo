@@ -1,0 +1,220 @@
+:root {
+  --primary: #002044;
+  --secondary: #009649;
+  --orange:#EF8836;
+  --pink: #D8143A;
+  --orangeFade:#FBD56F;
+}
+/* @font-face {
+font-family: Gordita;
+src: url('../assets/fonts/Gordita Regular.otf');
+} */
+*{
+    font-family: 'Gordita',  sans-serif;
+}
+html{
+height: 100% !important;                       /* note #1 */
+}
+body {
+height: 100% !important;                       /* note #1 */
+margin: 0;                          /* note #2 */
+/* overflow: hidden; */
+}
+.main {
+margin: 0;
+height: 100% !important;
+}
+.main-main{
+overflow-y: auto; 
+}
+.nav-wrapper>ul>li>{
+color:#333;
+}
+
+.btn,.btn-large,.btn-small,.btn-medium,.btn-flat{
+text-transform: capitalize;
+}
+.btn-primary{
+border:2px solid #009649 !important;
+opacity:0.8;
+color: #009649;
+border-radius:10px !important;
+padding:0px 30px;
+}
+.btn-primary:hover,.outline{
+background:#009649 !important;
+color:#fff;
+}
+.btn-large-primary{
+min-width:250px;
+border-radius:10px;
+padding-top:10px;
+padding-bottom:10px;
+}
+.outline{
+border:1px solid #009649 !important;
+background:#fff !important;
+color: #009649;
+}
+.container{
+width:83%;
+}
+.full-w{
+width:100% !important;
+}
+.b{
+border:2px dashed red;
+}
+.card-panel,.card,.card>.card-image{
+border-radius:20px;
+}
+.icons-small{
+font-size:15px !important;
+}
+.gordita{
+font-family: 'Gorditas', cursive !important;
+}
+
+.primary-color{color:#002044;}
+.bg-primary{background:#002044;color:#ffffff;}
+.bg-secondary{background:#009649;color:#ffffff;}
+.secondary-color{color:#009649;}
+.p-2{padding:16px;}
+.pl-50{padding-left:50px;}
+.pl-100{padding-left:100px;}
+.pl-120{padding-left:120px;}
+.pb-25{padding-bottom:25px;}
+.pb-50{padding-bottom:50px;}
+.pb-100{padding-bottom:100px;}
+.pb-120{padding-bottom:120px;}
+.pt-25{padding-top:25px;}
+.pt-50{padding-top:50px;}
+.pt-100{padding-top:100px;}
+.pt-120{padding-top:120px;}
+.m-2{margin:16px;}
+.mt-10{margin-top:10px;}
+.mt-25{margin-top:25px;}
+.mt-50{margin-top:50px;}
+.mt-100{margin-top:100px;}
+.mt-120{margin-top:120px;}
+.ml-25{margin-left:25px;}
+/* custom code */
+.dashboard-logo{
+    height:20% !important;
+}
+.dashboard-sidebar{
+    height:70% !important;
+}
+.dashboard-sidebar-footer>.collection{
+    border:none !important;
+}
+.dashboard-sidebar-footer>.collection>.collection-item{
+    /* height:10% !important; */
+    background:transparent !important;
+    position:fixed;
+    top:90%;
+}
+.dashboard-sidebar>.collection{
+    border:none !important;
+}
+.dashboard-sidebar>.collection>.collection-item{
+    border: none;
+    background:transparent !important;
+    margin-top:10px;
+}
+.dashboard-sidebar>.collection>.collection-item:hover{
+cursor: pointer !important;
+}
+.dashboard-sidebar>.collection>.active{
+    background: #FAFAFA !important;
+}
+.dashboard-sidebar>.collection>.active>.title{
+    color:#002044 !important;
+}
+#page-header-title{
+    /* font-family: Gordita; */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 68px;
+    color: #002044 ;
+    margin-right:10px;
+    margin-top:-5px !important;
+}
+/* .page-header-title>p{
+
+} */
+.main{
+   width:100% !important;
+}
+.stats-cards>.col>.card-panel{
+    border-radius:10px;
+
+}
+.stats-cards>.col>.stats-1{
+ background:var(--orange) !important;
+}
+.stats-cards>.col>.stats-2{
+ background:var(--secondary) !important;
+}
+.stats-cards>.col>.stats-3{
+ background:var( --pink) !important;
+}
+.latest-activity .card-panel{
+ border-radius:20px;
+}
+.latest-activity .collection, .latest-activity .collection .collection-item {
+    border:none;
+}
+.latest-activity>.col>.card-panel>.collection>.collection-item>#card-title-category{
+    /* font-family: Gordita;
+font-style: normal; */
+font-weight: normal;
+font-size: 15px;
+line-height: 21px;
+color:var(--primary);
+
+}
+.latest-activity>.col>.card-panel #card-title{
+/* font-family: Gordita;
+font-style: normal; */
+font-weight: 550;
+font-size: 30px;
+line-height: 40px;
+/* identical to box height */
+color:var(--primary);
+
+}
+
+.latest-activity>.col>.card-panel>.collection>p>.card-desc{
+/* font-family: Gordita;
+font-style: normal; */
+font-weight: normal;
+font-size: 13px;
+line-height: 19px;
+/* identical to box height */
+
+color: rgba(53, 53, 53, 0.8);
+}
+.latest-activity-title{
+    /* font-family: Gordita; */
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 17px;
+/* identical to box height */
+
+
+color: rgba(53, 53, 53, 0.8);
+}
+
+.courses-tab-title>#header-title{
+font-weight: 470;
+font-size: 30px;
+line-height: 40px;
+/* identical to box height */
+color: #353535;
+}
+#course-outline .collection, #course-outline .collection-item{
+    border:none;
+}

@@ -1,0 +1,114 @@
+.banner-contact{
+    position: relative;
+    width:100% !important; 
+    height:400px;
+}
+.banner-about{
+    position: relative;
+    width:100%; 
+    height:761px;
+}
+
+#banner_contact_img{
+    position: absolute;
+    z-index: -1;
+    background-image:url("./../../assets/Aurora_images/support.png") !important;
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    width:100%; 
+    height:370px!important;
+}
+#banner_explore_img{
+   position: absolute;
+    z-index: -1;
+    background-image:
+    url('./../../assets/Aurora_images/explore.png') !important;
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    width:100%; 
+    height:370px!important; 
+}
+#banner_about_img{
+   position: absolute;
+    z-index: -1;
+    background-image:url('./../../assets/Aurora_images/about.png') !important;
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    width:100%; 
+    height:761px!important; 
+}
+#banner_terms_mg{
+    position: absolute;
+    z-index: -1;
+    background-image:url('./../../assets/Aurora_images/terms and condition page image-min.png') !important;
+    background-size:cover;
+    background-position:center bottom ;
+    background-repeat:no-repeat;
+    width:100%; 
+    height:370px!important; 
+}
+.banner-single-course{
+    height:auto !important;
+    background:#002044;
+    padding:50px 0px ;
+    min-height:550px;
+}
+.section_body_title{
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 46px;
+color:var(--primary);
+}
+
+.contact-body input{
+    width:100% !important;
+}
+
+
+
+#overlay{
+    opacity:0.95!important;
+    height:370px!important; 
+    width:100 !important;
+    background: url("./../../assets/Aurora_images/svg/overlay.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+#div-overlay{
+    opacity:0.95!important;
+}
+
+.banner-single-course #card-info-right{
+    background: url("./../../assets/Aurora_images/Courses\ card\ image-min.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size:fit;
+    height:524px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+/* #meet-ceo{
+    height:600px; 
+  background:#002044
+} */
+
+#feedbacks{
+    background: var(--paleGreen) !important;
+    padding-bottom:30px !important;
+    margin-top:-50px !important;
+}
+#feedback-tab{
+    border-radius:8px; 
+    padding:16px;
+    background:#CEDFDC;
+}
+#feedback-tab .img-avatar{
+    margin:0px auto !important;
+    width:120px;height:100px;
+} 
+ 

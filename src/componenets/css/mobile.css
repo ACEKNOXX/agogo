@@ -1,0 +1,90 @@
+ @media only screen and (max-width: 600px) {
+           
+.footer>.container{
+    width:98%;
+}
+.container{
+    width:95% !important;
+    /* border:2px dashed red !important; */
+    padding-bottom:20px;
+}
+
+.section-heading{
+    /* border:2px dashed red; */
+    width:250px;
+}
+.learn-online{
+    /* border:2px dashed red; */
+    margin-bottom:0px !important;
+}
+.footer>.container{
+    width:98%;
+}
+.container{
+    max-width:97% !important;
+    /* border:2px dashed red !important; */
+    padding-bottom:20px;
+}
+
+.section-heading{
+width:300px;
+    /* border:2px dashed yellow; */
+    margin-left:-100px;
+}
+.banner-single-course #card-info-right{
+    background: url("./../../assets/Aurora_images/Courses\ card\ image-min.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:fit;
+    height:524px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.section-heading{
+    /* border:2px dashed red !important; */
+    width:250px;
+}
+#student-heading{
+    width:300px !important;
+    margin-left:-100px;
+    text-align:center;
+    border:2px dashed red !important;
+}
+.index-banner-header{
+    /* border:2px dashed red;  */
+    width:90%;
+    height:400px;
+    margin-top:0px;
+}
+.index-banner-header-article{
+/* border:2px dashed red; */
+width:90%;
+color:#fff;
+display:none;
+}
+.home-page-banner-image{
+display:none;
+}
+#banner-join-now{
+    margin-top:-100px;
+}
+.banner-row-one{
+width:100% ;
+}
+.alittle-text{
+width:300px;
+}
+.alittle-text-header{
+width:90%;
+}
+.container-flux{
+width:100% !important;
+}
+.banner-row-one{
+background:url('./../../assets/Aurora_images/homepage hero image-min.png');
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center left; 
+}
+
+}
