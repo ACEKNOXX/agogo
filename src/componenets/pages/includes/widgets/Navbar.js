@@ -1,27 +1,58 @@
 import React from 'react'
 import { Link,useHistory } from 'react-router-dom'
-// import SignedIn from './SignedInLinks'
-// import SignedOut from './SignedOutLinks'
+import Backdrop from '@material-ui/core/Backdrop';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { makeStyles } from '@material-ui/core/styles';
 import { useAuth } from './../../../../context/AuthContext'
 import Dialog from '@material-ui/core/Dialog';
 import Login from "./../../../auth/Login";
 import Signup from "./../../../auth/Signup";
 import Sidebar from './Sidebar'
 
+const useStyles = makeStyles((theme) => ({
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 4,
+    color: '#fff',
+  },
+}));
+
 
 const Navbar = () => {
-    const { currentUser, logout,refresh } = useAuth();
+    const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
+    const handleClose = () => {
+        setOpen(false);
+    };
+    const { currentUser, logout, refresh } = useAuth();
+    var str = currentUser!=null ? currentUser.displayName:"Ace";
+    var s= str.split("")
+    var initials = s[0].toUpperCase()
     const history = useHistory()
     
     
 
-    const handleLogout = async() => {
+    const handleLogout = async (e) => {
+        e.preventDefault()
+        setOpen(true)
+        
+        
         await logout()
-        await refresh()
+        
+        setTimeout(async () => {
+            // await refresh()
+            window.location.reload()
+        }, 5000);
+        
     }
     return (
-       
+        
         <div>
+        <Backdrop className={classes.backdrop} open={open} >
+                <CircularProgress color="inherit" /><br/>
+                {/* <div className="center">
+                    <p>Logging out user</p>
+                </div> */}
+        </Backdrop>
          <nav className="white">
             <div className="nav-wrapper container">
                 <Link to="/" className="brand-logo">
@@ -96,7 +127,7 @@ const Navbar = () => {
                     }
                     { currentUser && 
                         <li className="right">
-                            <Link to="/user" className="btn-floating green center with-text text-darken-3">TM</Link>
+                            <Link to="/user" className="btn-floating btn-flat green center white-text " style={{fontSize:"25px"}}>{initials}</Link>
                         </li> 
                         
                     }
