@@ -115,18 +115,7 @@ export default function AddBlogArticle() {
                                                     <RichTextBox />
                                                 </div>
                                             </div>
-                                            {/* <div className=" row">
-                                                <div className="form-section-1 container col s12">
-                                                    <div className="col s12 p-2">
-                                                        <Button disabled={loading}  id="submit-btn" type="submit" className="btn-large col s5  btn-flat  ">
-                                                            <span className="white-text">
-                                                            Ok, publish
-                                                            </span>    
-                                                        </Button>
-                                                    </div>
-                                                </div>
-
-                                            </div> */}
+                                            
                                             
                                         </div>
                                         

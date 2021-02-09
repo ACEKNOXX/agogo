@@ -127,7 +127,7 @@ const Navbar = () => {
                     }
                     { currentUser && 
                         <li className="right">
-                            <Link to="/user" className="btn-floating btn-flat green center white-text " style={{fontSize:"25px"}}>{initials}</Link>
+                            <Link to="/user" className="btn-floating btn-flat green center white-text " >{initials}</Link>
                         </li> 
                         
                     }

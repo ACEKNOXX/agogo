@@ -98,7 +98,7 @@ export default function AddCourse(props) {
                 console.log(dataToPush)
 
                 await firestore.collection('courses').doc().set(dataToPush)
-                //  history.push('/admincourseUpload')
+                 history.push('/admin')
             })
             .catch((error) => {
                 // Handle any errors
