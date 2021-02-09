@@ -25,6 +25,7 @@ import Explore from './pages/Explore'
 import About from './pages/About'
 import MyCourses from './user/pages/MyCourses'
 import NyProfile from './user/pages/MyProfile'
+import EditProfile from './user/pages/EditProfile'
 
 class App extends Component{
   render(){
@@ -39,7 +40,8 @@ class App extends Component{
             <Route path="/about" component={About} />
             <PrivateRoute path='/user' component={UserHome} />
             <PrivateRoute path='/userMyCourses' component={MyCourses} />
-            <PrivateRoute path="/userProfile" component={NyProfile}/>
+            <PrivateRoute path="/userProfile" component={NyProfile} />
+            <PrivateRoute path='/userEditProfile' component={EditProfile} />
             <PrivateRoute path='/admin' component={AdminHome} />
             <PrivateRoute path="/admincourses" component={Courses} />
             <PrivateRoute path="/admincourseUpload" component={CoursesUpload} />

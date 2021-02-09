@@ -24,10 +24,10 @@ const Navbar = () => {
         setOpen(false);
     };
     const { currentUser, logout, refresh } = useAuth();
-    var str = currentUser!=null ? currentUser.displayName:"Ace";
-    var s= str.split("")
-    var initials = s[0].toUpperCase()
-    const history = useHistory()
+    // var str = currentUser!=null ? currentUser.displayName:"Ace";
+    // var s= str.split("")
+    // var initials = s[0].toUpperCase()
+    // const history = useHistory()
     
     
 
@@ -118,6 +118,15 @@ const Navbar = () => {
                         </li>
                     }
                         
+                    
+                    { currentUser && 
+                        <li className="right">
+                            <Link to="/user" className="btn-floating btn-flat green center white-text " >
+                                <i className="material-icons">account_circle</i>
+                            </Link>
+                        </li> 
+                        
+                    }
                     {currentUser && 
                         <li className="right">
                             <button type="button" onClick={handleLogout}  className="btn-flat btn-primary btn-oultine  transparent  modal-trigger">
@@ -125,13 +134,6 @@ const Navbar = () => {
                                 </button>
                         </li>
                     }
-                    { currentUser && 
-                        <li className="right">
-                            <Link to="/user" className="btn-floating btn-flat green center white-text " >{initials}</Link>
-                        </li> 
-                        
-                    }
-
                     
                 </ul>
             </div>

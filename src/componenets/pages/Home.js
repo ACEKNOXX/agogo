@@ -30,10 +30,22 @@ export default function Home() {
     const { currentUser, logout,refresh } = useAuth();
     
     useEffect(() => {
-        if (currentUser != null) {
-            // setOpen(false);
+        document.onreadystatechange = function () {
+            if (document.readyState === 'complete') {
+                setTimeout(() => {
+                    setOpen(false);
+                },5000)
+            }
+            if (document.readyState === "interactive") {
+                console.log("page loaded the interactive");
+                setOpen(true);
+            }
+            if (document.readyState === "loading") {
+                console.log("page is loading");
+                setOpen(true);                
+            }
         }
-    })
+    },[])
     return (
         <div className="Home-section">
             

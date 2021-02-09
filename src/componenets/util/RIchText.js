@@ -5,6 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
 import { makeStyles } from '@material-ui/core/styles';
 import { storage,firestore } from './../../firebase'
+import { CircularProgress } from '@material-ui/core';
 
 
 var bodText,title,image,author
@@ -148,9 +149,15 @@ render() {
                     <div className="form-section-1 container col s12">
                         <div className="col s12 p-2">
                             <Button disabled={loading} onClick={this.handleSubmit}  id="submit-btn" className="btn-large col s5  btn-flat  ">
-                                <span className="white-text">
-                                Ok, publish
-                                </span>    
+                                {loading && 
+                                    <CircularProgress />
+                                }
+                                {!loading &&
+                                    <span className="white-text">
+                                    Ok, publish
+                                    </span>  
+                                }
+                                  
                             </Button>
                         </div>
                     </div>

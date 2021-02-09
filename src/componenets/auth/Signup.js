@@ -1,8 +1,7 @@
 import React, { useRef,useState } from 'react'
 import {Link, useHistory } from 'react-router-dom';
-import Navbar from '../pages/includes/widgets/Navbar'
 import { useAuth } from './../../context/AuthContext'
-import app,{firestore,auth} from './../../firebase'
+import {firestore,auth} from './../../firebase'
 import './../css/App.css'
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -25,7 +24,7 @@ export default function Signup() {
     const usernameRef = useRef(null);
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
-    const { signup,firebaseC} = useAuth();
+    const {signup} = useAuth();
     // error state below
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
@@ -67,12 +66,14 @@ export default function Signup() {
                     console.log(error)
                 })
             // console.log(user.user.uid)
-            var savedUser = await firestore.collection("users")
+            await firestore.collection("users")
                 .doc(user.user.uid).set({
                     "uid":user.user.uid,
                     "displayName":name,
-                    "email":currentemail
+                    "email": currentemail,
+                    "phoneNumber":null
                 })
+            
             history.push('/user')
             
         }  catch (e) {

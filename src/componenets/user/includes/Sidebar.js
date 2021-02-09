@@ -8,16 +8,16 @@ export default function Sidebar() {
         <div className="container ">
             <div className="dashboard-logo">
                 <Link to="/">
-                    <img src="../assets/logos/logo white version.svg" height="90px" alt=""/>
+                    <img src="./../../../assets/logos/logo white version.svg" height="90px" alt="mm"/>
                 </Link>
             </div>
             <div className="dashboard-sidebar">
                 <ul className="collection">
                     <li className="collection-item active">
-                        <img src="../assets/svg/home_icon.svg" alt="" />
+                        <img src="./../../../assets/Aurora_images/svg/docs.svg" alt="" />
                         <span className="title white-text p-2">Home</span>
-                        <Link to="/" className="secondary-content">
-                            <img src="../../assets/svg/dot.svg" alt="" />
+                        <Link to="/user" className="secondary-content">
+                            <img src="./../../../assets/Aurora_images/svg/dot.svg" alt="" />
                         </Link>
                     </li>
                     <li className="collection-item ">
@@ -40,7 +40,7 @@ export default function Sidebar() {
                         </Link>
                     </li>
                     <li className="collection-item ">
-                        <Link to="/adminBlogPanel" className="modal-trigger white-text">
+                        <Link to="/" className="modal-trigger white-text">
                             <img src="assets/svg/docs_sidebar.svg" alt="" />
                             <span className="title ">Community</span>
                             <Link to="" className="secondary-content">

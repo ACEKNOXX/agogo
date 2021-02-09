@@ -61,7 +61,7 @@ export default function MobileSidebar() {
           
           <ListItem button key={currentUser.displayName}>
             <Link to="/user" className="black-text">
-              <ListItemIcon><i className="material-icons medium ">account_circle</i> </ListItemIcon>
+              <ListItemIcon><i className="material-icons  medium ">account_circle</i> </ListItemIcon>
               <ListItemText primary={currentUser.displayName} />
             </Link>
           </ListItem>
@@ -79,12 +79,12 @@ export default function MobileSidebar() {
           </Link>
         </ListItem>
         <ListItem button key={'My Courses'}>
-          <Link to="/explore" className="black-text">
+          <Link to="/userMyCourses" className="black-text">
             <ListItemText primary={'My Courses'} />
           </Link>
         </ListItem>
         <ListItem button key={'My Account'}>
-          <Link to="/blog" className="black-text">
+          <Link to="/userProfile" className="black-text">
             <ListItemText primary={'My Account'} />
           </Link>
         </ListItem>
@@ -95,15 +95,7 @@ export default function MobileSidebar() {
         </ListItem>
         
       </List>
-      <Divider />
-      <List>
-          <ListItem>
-            <Login />  <Signup />
-          </ListItem>
-          {/* <ListItem>
-            <Signup />
-          </ListItem> */}
-      </List>
+      
     </div>
   );
 
@@ -112,7 +104,7 @@ export default function MobileSidebar() {
       {['left'].map((anchor) => (
         <React.Fragment key={'left'}>
           <button type="button" className="btn-flat center"
-            onClick={toggleDrawer('left', true)}><Icon>menu</Icon></button>
+            onClick={toggleDrawer('left', true)}><Icon className="white-text">menu</Icon></button>
           <Drawer   anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
             {list('left')}
           </Drawer>

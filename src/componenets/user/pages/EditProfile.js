@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link} from 'react-router-dom'
-import { useAuth } from './../../../context/AuthContext'
+// import { useAuth } from './../../../context/AuthContext'
 import Sidebar from './../includes/Sidebar'
 import Header from './../includes/Header' 
 import Footer from './../includes/Footer'
 import TopHeader from './../includes/TopHeader'
 import './../css/style.css'
 import './../css/style2.css'
-import MyProfileWidget from './../includes/widget/MyProfileWidget'
+import MyProfileEditWidget from './../includes/widget/MyProfileEditWidget'
 
-export default function MyProfile() {
-    const { currentUser } = useAuth();
+export default function EditProfile() {
+    // const { currentUser } = useAuth();
 
     return (
         <div>
@@ -33,14 +33,14 @@ export default function MyProfile() {
                                             <span id="page-header-title">My Account</span>
                                         </div>
                                         <div className="col s12 m2  right">
-                                            <Link to="/" id="edit-btn" className="right secondary-content white-text mt-25 right waves-effect grey darken-2 btn-flat" >
+                                            <Link to="/userEditProfile" id="edit-btn" className="right secondary-content white-text mt-25 right waves-effect grey darken-2 btn-flat" >
                                                 <i className="material-icons left">edit</i>Edit Profile
                                             </Link>
                                         </div>
                                     </div>
                                 </div> 
 
-                                <MyProfileWidget />
+                                < MyProfileEditWidget />
                                     
                                 {/* <!-- main body --> */}
                             
