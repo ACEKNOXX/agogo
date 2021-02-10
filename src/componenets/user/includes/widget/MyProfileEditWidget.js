@@ -29,26 +29,34 @@ export default function MyProfileEditWidget() {
         e.preventDefault();
         setLoading(true)
         // console.log(emailRe)
-        // var email = emailRef.current.value
-        // var displayName = displayNameRef.current.value
-        // var phoneNumber = phoneNumberRef.current.value
-        // var aboutMe = aboutMeRef.current.value
-        // var password = passwordRef.current.value
+        var email = emailRef.current.value
+        var displayName = displayNameRef.current.value
+        var phoneNumber = phoneNumberRef.current.value
+        var aboutMe = aboutMeRef.current.value
+        var password = passwordRef.current.value
 
 
         try {
-            console.log(currentUser.id)
+            console.log("user id",currentUser.uid)
             // currentUser.updateEmail(email);
-            // firestor.collection("users").doc(currentUser.id).update({
-            //     capital: true
-            // })
-            // .then(() => {
-            //     console.log("Document successfully updated!");
-            // })
-            // .catch((error) => {
-            //     // The document probably doesn't exist.
-            //     console.error("Error updating document: ", error);
-            // });
+            firestore.collection("users").doc(currentUser.uid).update({
+                "email": email,
+                "displayName": displayName,
+                "phoneNumber": phoneNumber,
+                "aboutMe": aboutMe
+            })
+            .then(() => {
+                console.log("Document successfully updated!");
+                currentUser.updateEmail(email);
+                // currentUser.updateDisplayName(displayName)
+                currentUser.updatePassword(password);
+                console.log(currentUser);
+            }).catch((error) => {
+                // The document probably doesn't exist.
+                console.error("Error updating document: ", error);
+            });
+
+            
         } catch (err) {
             console.log(err)
         }

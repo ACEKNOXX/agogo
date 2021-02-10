@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link} from 'react-router-dom'
-// import { useAuth } from './../../../context/AuthContext'
+import { useAuth } from './../../../context/AuthContext'
 import Sidebar from './../includes/Sidebar'
 import Header from './../includes/Header' 
 import Footer from './../includes/Footer'
@@ -10,7 +10,7 @@ import './../css/style2.css'
 import MyProfileWidget from './../includes/widget/MyProfileWidget'
 
 export default function MyProfile() {
-    // const { currentUser } = useAuth();
+    const { currentUser } = useAuth();
 
     return (
         <div>
@@ -40,7 +40,7 @@ export default function MyProfile() {
                                     </div>
                                 </div>
 
-                                <MyProfileWidget />
+                                <MyProfileWidget uid={currentUser.uid} />
                                     
                                 {/* <!-- main body --> */}
                             

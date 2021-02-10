@@ -1,9 +1,31 @@
-import React from 'react'
-import { useAuth } from './../../../../context/AuthContext'
+import React,{useEffect,useState} from 'react'
+import {firestore} from './../../../../firebase'
 
-export default function MyProfileWidget() {
-    const { currentUser } = useAuth();
+export default function MyProfileWidget(props) {
+    const uid = props.uid
+    const [loading, setLoading] = useState(false)
+    var dett = {
+        displayName:null,
+        phoneNumber: null,
+        photoUrl: null,
+        email: null,
+        aboutMe:null
+    }
+    const [myDetails,setMyDetails]=useState(null)
 
+    useEffect(() => {
+        firestore.collection("users").doc(uid).get().then((doc) => {
+            setLoading(true)
+            const dets = doc.data()
+            setMyDetails(dets)
+            console.log(dets)
+
+            setTimeout( ()=>{ }, 5000)
+            setLoading(false)
+        }).catch((e) => {
+            console.log("error from snapshot",e)
+        })
+    },[])
     return (
         <div>
             <div className="row">
@@ -14,12 +36,21 @@ export default function MyProfileWidget() {
                                 width="100px"  
                                 height="100px"  className="circle" />
                                 <span className="title">
-                                    <h5>{currentUser.displayName}</h5>
+                                    <h5>
+                                        {loading && 
+                                            <div className="progress grey lighten-3" style={{borderRadius:"20px",height:"40px"}}>
+                                                <div className="indeterminate grey lighten-4"></div>
+                                            </div>
+                                        }
+                                    
+                                    </h5>
                                 </span>
                                 <p className="grey-text">Description:
                                     <br/>
                                     <span className="black-text">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi aut labore eveniet nesciunt optio nihil et in error quaerat veniam omnis, suscipit doloremque doloribus totam, unde quam placeat, incidunt quidem.
+                                        <div className="progress grey lighten-3" style={{borderRadius:"20px",height:"80px"}}>
+                                            <div className="indeterminate grey lighten-4"></div>
+                                        </div>
                                     </span>
                                 </p>
                                
@@ -31,22 +62,22 @@ export default function MyProfileWidget() {
                                    
                                 </span>
                                 <p>
-                                    {currentUser.email}
+                                    <div className="progress grey lighten-3" style={{borderRadius:"20px",height:"40px"}}>
+                                        <div className="indeterminate grey lighten-4"></div>
+                                    </div>
                                 </p>
                             </li>
                             <li className="collection-item avatar grey lighten-4">
                                 <i className="material-icons circle grey lighten-2">phone</i>
                                 <span className="title">
-                                    {currentUser.phoneNumber==null && ""}
-                                    {currentUser.phoneNumber!=null && currentUser.phoneNumber}
+                                {loading &&
+                                    <div className="progress grey lighten-3" style={{borderRadius:"20px",height:"40px"}}>
+                                        <div className="indeterminate grey lighten-4"></div>
+                                    </div>
+                                }
                                 </span>
                             </li>
-                            <li className="collection-item avatar grey lighten-4">
-                                <i className="material-icons circle grey lighten-2">edit</i>
-                                <span className="title">
-                                    johndeo@gmail.com
-                                </span>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>
