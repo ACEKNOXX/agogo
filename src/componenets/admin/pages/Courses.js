@@ -88,6 +88,17 @@ export default function Courses() {
 
                                             
                                         </table>
+                                         
+                                        {courses.length==0 &&
+                                                <div className="row" style={{margin:"20px 0px ",width:"100%"}}>
+                                                    <div className="col s12 m4"></div>
+                                                    <div className="col s12 m4 center">
+                                                {/* <CircularProgress className="center green-text" disableShrink  /> */}
+                                                        <h5>No Course uploaded</h5>
+                                                    </div>
+                                                    <div className="col s12 m4"></div>
+                                                </div>
+                                        }
                                         {loading &&
                                             <div className="row" style={{margin:"20px 0px ",width:"100%"}}>
                                                 <div className="col s12 m4"></div>
@@ -97,17 +108,7 @@ export default function Courses() {
                                                 <div className="col s12 m4"></div>
                                             </div>
                                         }
-                                           
-                                        {courses.length==0 &&
-                                            <div className="row" style={{margin:"20px 0px ",width:"100%"}}>
-                                                <div className="col s12 m4"></div>
-                                                <div className="col s12 m4 center">
-                                            {/* <CircularProgress className="center green-text" disableShrink  /> */}
-                                                    <h5>No Course uploaded</h5>
-                                                </div>
-                                                <div className="col s12 m4"></div>
-                                            </div>
-                                        }
+                                          
                                     </div>
                                 </div>
                             

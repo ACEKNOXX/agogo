@@ -56,7 +56,7 @@ const Navbar = () => {
          <nav className="white">
             <div className="nav-wrapper container">
                 <Link to="/" className="brand-logo">
-                    <img src={'./assets/logos/1.svg'} alt="" />
+                    <img src='./../../assets/logos/1.svg' alt="" />
                 </Link>
                 <Link to="/" data-target="mobile-demo" className="sidenav-trigger">
                     {/* <i className="material-icons black-text">menu</i> */}

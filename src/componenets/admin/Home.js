@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import Sidebar from './includes/Sidebar'
 import Header from './includes/Header' 
 import Footer from './includes/Footer'
@@ -6,8 +6,26 @@ import TopHeader from './includes/TopHeader'
 import CourseCard from './includes/widget/CourseCard'
 import './css/style.css'
 import './css/style2.css'
+import ShimmerCourseCard from './includes/widget/ShimmerCourseCard'
+import {firestore} from './../../firebase'
 
 export default function AdminHome() {
+    const [loading, setLoading] = useState(false)
+    const [courses, setCourses] = useState([])
+    
+    useEffect(() => {
+        setLoading(true)
+
+       firestore.collection("courses").get().then((item) => {
+            const items = item.docs.map((doc) => doc)
+            setCourses(items)
+            // setCourses(itms)
+            setTimeout( ()=>{ }, 5000)
+            setLoading(false)
+        }).catch((e) => {
+            console.log("error from snapshot",e)
+        })
+    },[])
     return (
         <div>
                 <Header />
@@ -32,17 +50,25 @@ export default function AdminHome() {
                                         <div className="col s12 m4 right"></div>
                                     </div>
 
-                                    <div className="row">
-                                        <div className="col s12 m4">
-                                            <CourseCard />
+                                    {loading &&
+                                        <div className="row">
+                                            <div className="col s12 m4">
+                                                <ShimmerCourseCard />
+                                            </div>
+                                            <div className="col s12 m4">
+                                                <ShimmerCourseCard />
+                                            </div>
+                                            <div className="col s12 m4">
+                                                <ShimmerCourseCard />
+                                            </div>
                                         </div>
-                                        <div className="col s12 m4">
-                                            <CourseCard />
+                                    }
+                                    
+                                    {!loading &&
+                                        <div className="row">
+                                            {courses.map((course)=> <div className="col s12 m4"><CourseCard  course={course}/></div> )}
                                         </div>
-                                        <div className="col s12 m4">
-                                            <CourseCard />
-                                        </div>
-                                    </div>
+                                    }
                                 {/* <!-- main body --> */}
                             
                             </div>
