@@ -61,7 +61,9 @@ export default function Adverts() {
                 var dataToPush = {
                     "url": url,
                     "title": titleRef.current.value,
-                    "status":true
+                    "status": true,
+                    "image": true,
+                    "video":false
                 }
                 console.log(dataToPush)
                 await firestore.collection('adverts').doc().set(dataToPush)
@@ -151,7 +153,7 @@ export default function Adverts() {
                                                     <span style={{
                                                         marginRight:"10px"
                                                     }}></span>
-                                                <input
+                                                {/* <input
                                                     accept="video/*"
                                                     className={classes.input}
                                                     id="contained-button-file-video"
@@ -167,7 +169,7 @@ export default function Adverts() {
                                                         <VideocamIcon /> 
                                                     </IconButton>
                                                     </Button>
-                                                </label>
+                                                </label> */}
                                                 <p></p>
                                                 <Button disabled={loading} type="submit" className="btn-large green" variant="contained" color="secondary">
                                                    
