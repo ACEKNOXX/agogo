@@ -1,19 +1,24 @@
 import React from 'react'
 import { usePaystackPayment } from 'react-paystack'
+import { useHistory } from 'react-router-dom';
 
 export default function PayButton(props) {
   const amount = props.amount 
+  const history = useHistory()
   
   // you can call this function anything
   const onSuccess = (reference) => {
     // Implementation for whatever you want to do with reference and after success call.
     console.log(reference);
+    // redirect to whatsapp groupd
   };
 
   // you can call this function anything
   const onClose = () => {
     // implementation for  whatever you want to do when the Paystack dialog closed.
     console.log('closed')
+    // history.push("http://google.com")
+    window.location.href="https://chat.whatsapp.com/G0I0FDFns0G3QLKjoSKknv"
   }
 
     const PaystackHookExample = () => {

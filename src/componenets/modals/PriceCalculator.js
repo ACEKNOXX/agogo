@@ -42,8 +42,8 @@ export default function PriceCalculator() {
         <DialogContent style={{ width: "100% !important" }}>
             <div>
                 <div className="col s12 right">
-                    <span className="right modal-close black-text red lighten-4" 
-                    style={{borderRadius:"100%",width:"25px",height:"25px",padding:"3px 4px"}}> 
+                    <span onClick={handleClose} className="right modal-close black-text red lighten-4" 
+                    style={{cursor: "pointer",borderRadius:"100%",width:"25px",height:"25px",padding:"3px 4px"}}> 
                                 <i className="material-icons red-text" style={{ fontSize: "16px" }}>close</i> 
                     </span>
                 </div>
