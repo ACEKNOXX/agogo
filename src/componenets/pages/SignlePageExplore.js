@@ -1,12 +1,14 @@
-import React from 'react'
 import SingleExploreBannner from './includes/components/SingleExploreBanner'
 import Navbar from './includes/widgets/Navbar'
 import Footer from './includes/widgets/Footer'
-export default function SignlePageExplore() {
+
+export default function SignlePageExplore(props) {
+    const id = props.match.params.id;
+    
     return (
         <div>
             <Navbar />
-            <SingleExploreBannner />
+            <SingleExploreBannner id={id}/>
             <Footer />
         </div>
     )

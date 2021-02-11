@@ -1,57 +1,8 @@
-import React,{useEffect,useState} from 'react'
-import { firestore } from './../../../../firebase'
-import ShimmerSingleExploreWidget from './../widgets/ShimmerSingleExploreWidget'
+import React from 'react'
 
-export default function SingleExploreBanner(props) {
-    const id = props.id
-    const [details,setDetails] = useState([])
-    const [loading, setLoading] = useState(false)
-    const [course,setCourse] = useState(null)
-    const [isEmpti,setIsEmpti] = useState(false)    
-    
-    useEffect(() => {
-         setLoading(true)
-
-        firestore.collection("courses").doc(id).get().then((item) => {
-        
-            setLoading(true)
-            if (item.exists) {
-                setCourse(item.data())
-                // console.log("Document data:", item.data());
-            } else {
-                setLoading(false)
-                setIsEmpti(true)
-                // console.log("No such document!");
-            }
-            // console.log(item.id)
-           
-            setTimeout( ()=>{ }, 5000)
-            setLoading(false)
-        }).catch((e) => {
-            // console.log("error from snapshot",e)
-        })
-    },[])
+export default function ShimmerSingleExploreWidget() {
     return (
-        
         <section>
-            {loading && 
-                <ShimmerSingleExploreWidget />
-            }
-            {isEmpti &&
-                <div className="banner banner-single-course">
-                    <div className="row">
-                        <div className="col s12 m4"></div>
-                        <div className="col s12 m4 white center z-depth-1" style={{borderRadius:"20px"}}>
-                            <p><i className="material-icons center medium">error_outline</i></p>    
-                            <h2>Content Not Found !</h2>
-                        </div>
-                        <div className="col s12 m4"></div>
-                    
-                    </div>
-                </div>
-            }
-            {!isEmpti &&
-
             <div className="banner banner-single-course">
                 <div className="banner-single-course ">
                     <div className="container white  row z-depth-2" style={{ borderRadius: "20px" }}>
@@ -61,13 +12,19 @@ export default function SingleExploreBanner(props) {
                                 fontSize: "45px",
                                 lineHeight: "71px",
                                 color: "#002044"}}>
-                                   {course}
+                                   <div className="progress grey lighten-3"
+                                        style={{ borderRadius: "20px", height: "20px" }}>
+                                        <div className="indeterminate grey lighten-4"></div>
+                                    </div>
                                 </h6>
                                 <p style={{fontWeight: "normal",
                                     fontSize: "16px",
                                     lineHeight:"23px",
                                     color: "#002044"}}>
-                                    by {course.courseAuthor && course.courseAuthor}
+                                    <div className="progress grey lighten-3"
+                                        style={{ borderRadius: "20px",width:"40%",height: "10px" }}>
+                                        <div className="indeterminate grey lighten-4"></div>
+                                    </div>
                                 </p>
                                 <article style={{
                                     fontWeight: "normal",
@@ -75,7 +32,12 @@ export default function SingleExploreBanner(props) {
                                     lineHeight: "26px",
                                     color: "rgba(53, 53, 53, 0.9)"
                                 }}>
-                                   {course.courseShortDescription && course.courseShortDescription}
+                                    <div className="progress grey lighten-3"
+                                        style={{ borderRadius: "20px", height: "100px" }}>
+                                        <div className="indeterminate grey lighten-4"></div>
+                                    </div>
+                                    
+                                   
                                 </article>
                                 <div className="" style={{
                                     width: "210px",
@@ -132,19 +94,27 @@ export default function SingleExploreBanner(props) {
                                     
                                 </div>
                                 <div className="mt-25 full-w">
-                                    <a href="#modal1" className="btn-flat col s3 center btn-large green lighten-4 waves-effect waves-light btn "
+                                    {/* <a href="#modal1" className="btn-flat col s3 center btn-large green lighten-4 waves-effect waves-light btn "
                                         style={{ width: "150px", borderRadius: "8px" }}>
                                         <b className=" green-text text-lighten-1">Enroll now</b>
-                                    </a>  
+                                    </a>   */}
+                                    <div className="progress grey lighten-3"
+                                        style={{ borderRadius: "20px",width:"150px", height: "60px" }}>
+                                        <div className="indeterminate grey lighten-4"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col s12 m6 l6" id="card-info-right"></div>
+                        <div className="col s12 m6 l6">
+                            <div className="progress grey lighten-3"
+                                style={{ borderRadius: "0px 20px 20px 0px",height:"450px"}}>
+                                <div className="indeterminate grey lighten-4"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            }
-            
         </section>
+
     )
 }
