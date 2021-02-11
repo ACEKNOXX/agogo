@@ -8,6 +8,7 @@ import Dialog from '@material-ui/core/Dialog';
 import Login from "./../../../auth/Login";
 import Signup from "./../../../auth/Signup";
 import Sidebar from './Sidebar'
+import PriceCalculator from './../../../modals/PriceCalculator'
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -93,7 +94,8 @@ const Navbar = () => {
                         <Link to="/about" className="grey-text text-darken-3">About Us</Link>
                     </li>
                     <li>
-                        <Link to="#modal-pricing"  className="grey-text text-darken-3  modal-trigger">Pricing calculator</Link>
+                        {/* <Link to="#modal-pricing"  className="grey-text text-darken-3  modal-trigger">Pricing calculator</Link> */}
+                        <PriceCalculator />
                     </li>
                     {/* <li>
                         {!currentUser && 
