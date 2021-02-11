@@ -1,11 +1,8 @@
 import React from 'react'
-import Navbar from './includes/widgets/Navbar'
-import Footer from './includes/widgets/Footer'
 import { usePaystackPayment } from 'react-paystack'
-import Button from '@material-ui/core/Button';
 
-export default function Pay() {
-
+export default function PayButton(props) {
+  const amount = props.amount 
   
   // you can call this function anything
   const onSuccess = (reference) => {
@@ -24,7 +21,7 @@ export default function Pay() {
       const config = {
             reference:`${gu}`,
             email: "user@example.com",
-            amount: 20000,
+            amount: amount*100,
             publicKey: 'pk_live_e09257868dcb4f294715010d6971277b28bfaba5'
         }
         const initializePayment = usePaystackPayment(config)
@@ -33,16 +30,11 @@ export default function Pay() {
               <button className="btn-flat btn-primary green darken-4 white-text"
                   onClick={() => {
                 initializePayment(onSuccess, onClose)
-            }}>Paystack Hooks Implementation</button>
+            }}>Proceed to Pay({amount})</button>
         </div>
       );
   };
     return (
-        <div>
-            <Navbar />
-            <h1>Pay</h1>
-                <PaystackHookExample />
-            <Footer />
-        </div>
+      <PaystackHookExample />
     )
 }

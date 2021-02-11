@@ -60,26 +60,26 @@ export default function PricePlan() {
                                     }}>
                                         <h5 className="white-text" style={{
                                             fontWeight:"bold",
-                                            fontSize:"32px",
+                                            fontSize:"28px",
                                             lineHeight: "46px"
-                                        }}>Basic</h5>
+                                        }}>Savings club</h5>
                                     </div>
                                     <div className="center">
                                         <span>
                                             <h4 className="pt-25" style={{fontWeight:"normal",
                                             lineHeight:"28px",color:"#353535"}}>
-                                            <small style={{fontSize:"20px"}}> ₦</small><b>10000</b>    
+                                            <small style={{fontSize:"20px"}}> ₦</small><b>5000</b>    
                                             </h4>
                                             <small style={{fontWeight:"normal",
                                             fontSize:"16px",
                                             lineHeight: "23px",color:"rgba(53, 53, 53, 0.8)"}}>
-                                            for 3months</small>
+                                            One-off Fee</small>
                                         </span>
                                     
                                     </div>
                                     <div className="center mt-25">
                                         <div className="col s3"></div>
-                                        <Link to="/pay" className="col s6  btn-flat   btn-primary transparent waves-effect waves-light btn modal-trigger"
+                                        <Link to="/financialClub/Savings club" className="col s6  btn-flat   btn-primary transparent waves-effect waves-light btn modal-trigger"
                                             style={{ height: "45px" }}>
                                             Join Aurora
                                         </Link >
@@ -101,26 +101,27 @@ export default function PricePlan() {
                                     }}>
                                         <h5 className="white-text" style={{
                                             fontWeight:"bold",
-                                            fontSize:"32px",
+                                            fontSize:"28px",
                                             lineHeight: "46px"
-                                        }}>Pro</h5>
+                                        }}>Investment Club </h5>
                                     </div>
                                     <div className="center">
                                         <span>
                                             <h4 className="pt-25" style={{fontWeight:"normal",
                                             lineHeight:"28px",color:"#353535"}}>
-                                            <small style={{fontSize:"20px"}}> ₦</small><b>20000</b>    
+                                            <small style={{ fontSize: "20px" }}> ₦</small><b>6000</b>/
+                                            <small style={{fontSize:"20px"}}> ₦</small><b>10000</b>    
                                             </h4>
                                             <small style={{fontWeight:"normal",
                                             fontSize:"16px",
                                             lineHeight: "23px",color:"rgba(53, 53, 53, 0.8)"}}>
-                                            for 6months</small>
+                                            for 6 months/for 12 months</small>
                                         </span>
                                     
                                     </div>
                                     <div className="center mt-25">
                                         <div className="col s3"></div>
-                                        <Link to="/pay" className="col s6  btn-flat   btn-primary transparent waves-effect waves-light btn modal-trigger"
+                                        <Link to="/financialClub/Investment Club" className="col s6  btn-flat   btn-primary transparent waves-effect waves-light btn modal-trigger"
                                             style={{ height: "45px" }}>
                                             Join Aurora
                                         </Link >
