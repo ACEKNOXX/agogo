@@ -16,7 +16,8 @@ export default function SingleExploreBanner(props) {
         
             setLoading(true)
             if (item.exists) {
-                setCourse(item.data())
+                var r= item.data()
+                // setCourse(r)
                 // console.log("Document data:", item.data());
             } else {
                 setLoading(false)
@@ -50,10 +51,10 @@ export default function SingleExploreBanner(props) {
                     </div>
                 </div>
             }
-            {!isEmpti &&
+            {!loading &&
 
-            <div className="banner banner-single-course">
-                <div className="banner-single-course ">
+                <div className="banner banner-single-course">
+                    <div className="banner-single-course ">
                     <div className="container white  row z-depth-2" style={{ borderRadius: "20px" }}>
                         <div className="col  s12 m6 l6 mt-50 mb-50">
                             <div className="container ">
@@ -67,7 +68,8 @@ export default function SingleExploreBanner(props) {
                                     fontSize: "16px",
                                     lineHeight:"23px",
                                     color: "#002044"}}>
-                                    by {course.courseAuthor && course.courseAuthor}
+                                    by
+                                    {/* {course.courseAuthor && course.courseAuthor} */}
                                 </p>
                                 <article style={{
                                     fontWeight: "normal",
@@ -75,7 +77,7 @@ export default function SingleExploreBanner(props) {
                                     lineHeight: "26px",
                                     color: "rgba(53, 53, 53, 0.9)"
                                 }}>
-                                   {course.courseShortDescription && course.courseShortDescription}
+                                   {/* {course.courseShortDescription && course.courseShortDescription} */}
                                 </article>
                                 <div className="" style={{
                                     width: "210px",
