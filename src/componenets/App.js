@@ -27,6 +27,7 @@ import MyCourses from './user/pages/MyCourses'
 import NyProfile from './user/pages/MyProfile'
 import EditProfile from './user/pages/EditProfile'
 import SingleExploreBanner from './pages/SignlePageExplore'
+import Pay from './pages/Pay'
 
 class App extends Component{
   render(){
@@ -40,6 +41,7 @@ class App extends Component{
             <Route path="/explore" component={Explore} />
             <Route path="/about" component={About} />
             <Route path="/single-course/:id" component={SingleExploreBanner} />
+            <Route path="/pay" component={Pay} />
             <PrivateRoute path='/user' component={UserHome} />
             <PrivateRoute path='/userMyCourses' component={MyCourses} />
             <PrivateRoute path="/userProfile" component={NyProfile} />

@@ -47,6 +47,7 @@ export default function PricePlan() {
             
           </DialogContentText> */}
                 <DialogContent>
+                    <script src="https://js.paystack.co/v1/inline.js"></script>     
                     <div className="row" >
                             <div className="col s12 m6">
                                 
@@ -78,7 +79,7 @@ export default function PricePlan() {
                                     </div>
                                     <div className="center mt-25">
                                         <div className="col s3"></div>
-                                        <Link to="/" className="col s6  btn-flat   btn-primary transparent waves-effect waves-light btn modal-trigger"
+                                        <Link to="/pay" className="col s6  btn-flat   btn-primary transparent waves-effect waves-light btn modal-trigger"
                                             style={{ height: "45px" }}>
                                             Join Aurora
                                         </Link >
@@ -119,7 +120,7 @@ export default function PricePlan() {
                                     </div>
                                     <div className="center mt-25">
                                         <div className="col s3"></div>
-                                        <Link to="/" className="col s6  btn-flat   btn-primary transparent waves-effect waves-light btn modal-trigger"
+                                        <Link to="/pay" className="col s6  btn-flat   btn-primary transparent waves-effect waves-light btn modal-trigger"
                                             style={{ height: "45px" }}>
                                             Join Aurora
                                         </Link >
