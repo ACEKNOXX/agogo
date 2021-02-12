@@ -2,9 +2,12 @@ import React,{useRef,useState} from 'react'
 import { Link} from 'react-router-dom'
 import PayButton from './../../../util/PayButton'
 
+
+
 export default function FinancialClubBody(props) {
     const financialPlan = props.plan;
-    var amount;
+    var amount
+    
     if (financialPlan == "Savings club") {
         amount = "5000" 
     } else if(financialPlan == "Investment Club") {
@@ -16,10 +19,10 @@ export default function FinancialClubBody(props) {
     const emailRef = useRef(null)
     const nameRef = useRef(null)
     const phoneNumberRef = useRef(null)
-    const [ok,setOk] = useState(false)
+    const [ok, setOk] = useState(false)
+    var dataToPush 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setOk(true)
     }
     const handleChange = (e) => {
         var a, b, c;
@@ -28,6 +31,12 @@ export default function FinancialClubBody(props) {
         c = phoneNumberRef.current.value
         if ( a.length !==0 && b.lenght !==0 && c.length !==0 ){
             setOk(true)
+            dataToPush = {
+                email: a,
+                name: b,
+                phone: c,
+                amount:amount
+            }
         } else {
             setOk(false)
         }
@@ -76,7 +85,7 @@ export default function FinancialClubBody(props) {
                                         }
                                         
                                         {ok &&
-                                            <PayButton amount={amount} />
+                                            <PayButton amount={dataToPush} />
                                         }
                                     </div>
                                 </div>
@@ -102,7 +111,7 @@ export default function FinancialClubBody(props) {
                                     <p className="grey-text">
                                         Seamlessly maximize user friendly communities whereas customer directed results.
                                     </p><br/>
-                                    <PayButton amount={amount} />
+                                    <PayButton amount={dataToPush} />
                                 </div>
                             </div>
                             

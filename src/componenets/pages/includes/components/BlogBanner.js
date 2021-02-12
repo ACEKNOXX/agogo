@@ -9,20 +9,7 @@ export default function BlogBanner() {
                 <img  width="100%" id="overlay"  src="assets/Aurora_images/svg/overlay.svg" alt="" />
             </div>
         </div>
-        <div className="row pink " style={{marginTop:"-200px"}}>
-                    <div className="col s12 m4"></div>
-                    <div className="col s12 m4">
-                        <div className="red"
-                            style={{
-                                width: "100%",
-                                height: "300px",
-                               
-                            }}>
-                            
-                        </div>
-                    </div>
-                    <div className="col s12 m4"></div>
-                </div>
+       
         </div>
     )
 }

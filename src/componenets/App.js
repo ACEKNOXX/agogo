@@ -29,6 +29,8 @@ import EditProfile from './user/pages/EditProfile'
 import SingleExploreBanner from './pages/SignlePageExplore'
 import FinancialPlan from './pages/FinancialClub'
 import Blog from './pages/Blog'
+import BlogArticle from './pages/BlogArticle'
+
 
 class App extends Component{
   render(){
@@ -41,7 +43,8 @@ class App extends Component{
             <Route path="/login" component={Login} />
             <Route path="/explore" component={Explore} />
             <Route path="/about" component={About} />
-            <Route path="/blog" component={Blog}/>
+            <Route path="/blog" component={Blog} />
+            <Route path="/blogArticle/:id" component={BlogArticle} />
             <Route path="/single-course/:id" component={SingleExploreBanner} />
             <Route path="/financialClub/:plan" component={FinancialPlan} />
             <PrivateRoute path='/user' component={UserHome} />
