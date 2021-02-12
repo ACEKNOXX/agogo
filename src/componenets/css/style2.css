@@ -30,6 +30,17 @@
     width:100%; 
     height:370px!important; 
 }
+#banner_blog_img{
+   position: absolute;
+    z-index: -1;
+    background-image:
+    url('./../../assets/Aurora_images/Community page hero image-min.png') !important;
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    width:100%; 
+    height:370px!important; 
+}
 #banner_about_img{
    position: absolute;
     z-index: -1;

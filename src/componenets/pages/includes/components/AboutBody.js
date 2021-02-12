@@ -22,10 +22,10 @@ export default function AboutBody() {
                                     </div>
 
                                     <div className="col s12">
-                                        <p className=" alittle-text grey-text">
+                                        <p className=" alittle-text grey-text darken-3">
                                            We at Aurora saw a lot of people in the corporate private sector especially women were always broke and borrwing money to meet their financial needs
                                         </p>
-                                        <p className=" alittle-text grey-text">
+                                        <p className=" alittle-text grey-text darken-3">
                                             Many don’t know how to save, build investments or manage their lifestyle. Dependence on monthly salary without any other source of income also led to this initiative, thus we all need a refresh or restart in the approach to our finance
                                         </p><br/>
                                     </div>

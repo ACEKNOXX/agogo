@@ -12,13 +12,12 @@ export default function IndexBanner() {
                         <div className="col s12  m6 ">
                             <div className="">
                                 <div className="banner-index-holder">
-                                    <h2 className="white-text index-banner-header" > 
+                                    <div style={{lineHeight:"1.6"}} className="white-text index-banner-header" > 
                                         FINANCIAL PLANNING WITH  
                                         <span>
                                             <i> Aurora</i>
                                         </span> 
-                                    </h2>
-
+                                    </div>
                                     <article className="grey-text index-banner-header-article">
                                         Aurora helps you to make smart financial decisions by offering lessons and training on the intricacies of finance. Learn on Aurora and connect with several other people who use our resources to up their financial game.
                                     </article>

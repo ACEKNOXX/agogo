@@ -12,7 +12,7 @@ const [loading, setLoading] = useState(false)
         setLoading(true)
 
         firestore.collection("adverts").get().then((item) => {
-           const items = item.docs.map((doc) => doc.data().url)
+           const items = item.docs.map((doc) => doc)
             setCourses(items)
             // setCourses(itms)
 
@@ -32,7 +32,7 @@ const [loading, setLoading] = useState(false)
                 <div className="col s12 m4 center">
                     {/* {courses.map((course)=> `${course}--` )} */}
                     {/* <CircularProgress /> */}
-                    <ImageSlider imgs={courses}/>
+                    {/* <ImageSlider imgs={courses}/> */}
 
                 </div>
                 <div className="col s12 m4"></div>

@@ -22,10 +22,11 @@ export default function Footer() {
                     <div className="col s12 m4">
                         <h6 className="white-text" style={{fontSize:"25px"}}> <b>Quick links</b>  </h6>
                         <div className="mt-25 footer-nav">
-                            <Link to="/" className="white-text"><h6>Home</h6> </Link>
-                            <Link to="/explore" className="white-text"><h6>Explore</h6> </Link>
-                            <Link to="/" className="white-text"><h6>Community</h6> </Link>
-                            <Link to="" className="white-text"><h6>About Us</h6> </Link>
+                            <Link to="/" className="white-text"><h6 className="white-text">Home</h6> </Link>
+                            <Link to="/explore" className="white-text"><h6 className="white-text">Explore</h6> </Link>
+                            <Link to="/blog" className="white-text"><h6 className="white-text">Blog</h6> </Link>
+                            <Link to="/" className="white-text"><h6 className="white-text">Community</h6> </Link>
+                            <Link to="/about" className="white-text"><h6 className="white-text">About Us</h6> </Link>
                         </div>
                     </div>
                 
@@ -34,17 +35,17 @@ export default function Footer() {
                             <b>Company</b>    
                         </h6>
                         <div className="mt-25 footer-nav">
-                            <Link to="/" className="white-text"><h6>Help & support</h6> </Link>
-                            <Link to="/" className="white-text"><h6>Terms of use</h6> </Link>
-                            <Link to="/" className="white-text"><h6>Contact Us</h6> </Link>
-                            <Link to="/" className="white-text"><h6>Privacy</h6> </Link>
+                            <Link to="/" className="white-text"><h6 className="white-text">Help & support</h6> </Link>
+                            <Link to="/" className="white-text"><h6 className="white-text">Terms of use</h6> </Link>
+                            <Link to="/" className="white-text"><h6 className="white-text">Contact Us</h6> </Link>
+                            <Link to="/" className="white-text"><h6 className="white-text">Privacy</h6> </Link>
                         </div>
                     </div>
                     <div className="col s12 m4">
                         <h6 className="white-text" style={{fontSize:"25px"}}> <b>Courses</b>  </h6>
                         <div className="mt-25 footer-nav">
-                            <Link to="/" className="white-text"><h6>Public finance</h6> </Link>
-                            <Link to="/" className="white-text"><h6>Business finance</h6> </Link>
+                            <Link to="/explore" className="white-text"><h6 className="white-text">Public finance</h6> </Link>
+                            <Link to="/explore" className="white-text"><h6 className="white-text">Business finance</h6> </Link>
                         
                         </div>
                     </div>

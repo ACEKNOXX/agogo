@@ -1,4 +1,5 @@
 import React from 'react'
+import PricePlan from './../../../modals/PricePlan'
 
 export default function HowItWorks() {
     return (
@@ -82,9 +83,10 @@ export default function HowItWorks() {
                         </p>
                     </div>
                     <div className="col s12 center ">
-                            <button type="button"  data-target="modal-pricing-plan" className="btn-large btn-flat btn-large-primary white-text green modal-trigger">
+                            {/* <button type="button"  data-target="modal-pricing-plan" className="btn-large btn-flat btn-large-primary white-text green modal-trigger">
                         Join aurora 
-                            </button>
+                            </button> */}
+                        <PricePlan />
                     </div>
                 </div>
                 

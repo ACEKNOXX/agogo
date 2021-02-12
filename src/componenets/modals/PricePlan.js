@@ -30,11 +30,11 @@ export default function PricePlan() {
             </Button> */}
             <Button type="button" id="banner-join-now"  
                 className="btn-large btn-flat btn-large-primary white-text green" onClick={handleClickOpen} >
-                <h6 style={{
-                    
-                }}>
+                {/* <h6 style={{
+                    color:"#ffffff"
+                }}> */}
                     Join aurora 
-                </h6>
+                {/* </h6> */}
             </Button>
        
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
