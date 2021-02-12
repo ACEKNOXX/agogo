@@ -15,6 +15,7 @@ import './../css/style2.css'
 import { storage,firestore } from './../../../firebase'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { useAuth } from './../../../context/AuthContext'
+import { Link, useHistory } from 'react-router-dom'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Adverts() {
+    const history = useHistory()
     const classes = useStyles();
     const imageRef = useRef(null);
     const videoRef = useRef(null);
@@ -68,6 +70,7 @@ export default function Adverts() {
                 console.log(dataToPush)
                 await firestore.collection('adverts').doc().set(dataToPush)
 
+                history.push("/admin")
             })
             .catch((error) => {
                 // Handle any errors
@@ -78,8 +81,6 @@ export default function Adverts() {
             console.log(err)
         }
         setLoading(false)
-
-           
         // console.log(imageRef.current.value)
     }
    return (

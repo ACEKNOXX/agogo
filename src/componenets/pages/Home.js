@@ -13,6 +13,7 @@ import HowItWorks from './includes/components/HowItWorks'
 import DashboardSnippet from './includes/components/DashboardSnippet'
 import LittleAbout from './includes/components/LittleAbout'
 import PopularCourses from './includes/components/PopularCourses'
+import AdsSection from './includes/components/AdsSection'
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -54,6 +55,7 @@ export default function Home() {
             </Backdrop>
             <Navbar />
             <IndexBanner />
+            <AdsSection />
             <PopularCourses />
             <HowItWorks />
             <DashboardSnippet />

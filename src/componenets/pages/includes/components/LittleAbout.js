@@ -30,7 +30,8 @@ export default function LittleAbout() {
                     </div>
                     <div className="col s12 m6 ">
                         <img src="assets/Aurora_images/About us page image 2-min.png" 
-                        className="responsive-img full-w materialboxed hide-on-med-and-down" width="100%"   alt="" />
+                            className="responsive-img full-w materialboxed 
+                        hide-on-med-and-down" width="100%" style={{marginBottom:"-20px"}} alt="" />
                     </div>
                 </div>
                 <img src="assets/Aurora_images/About us page image 2-min.png" 
