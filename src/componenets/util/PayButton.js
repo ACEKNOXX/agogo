@@ -11,6 +11,8 @@ export default function PayButton(props) {
     // Implementation for whatever you want to do with reference and after success call.
     console.log(reference);
     // redirect to whatsapp groupd
+    window.location.href="https://chat.whatsapp.com/G0I0FDFns0G3QLKjoSKknv"
+
   };
 
   // you can call this function anything
@@ -18,7 +20,6 @@ export default function PayButton(props) {
     // implementation for  whatever you want to do when the Paystack dialog closed.
     console.log('closed')
     // history.push("http://google.com")
-    window.location.href="https://chat.whatsapp.com/G0I0FDFns0G3QLKjoSKknv"
   }
 
     const PaystackHookExample = () => {
