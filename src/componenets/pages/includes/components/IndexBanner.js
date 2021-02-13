@@ -18,7 +18,7 @@ export default function IndexBanner() {
                                             <i> Aurora</i>
                                         </span> 
                                     </div>
-                                    <article className="grey-text index-banner-header-article">
+                                    <article className="grey-text text-lighten-5 index-banner-header-article">
                                         Aurora helps you to make smart financial decisions by offering lessons and training on the intricacies of finance. Learn on Aurora and connect with several other people who use our resources to up their financial game.
                                     </article>
                                     <br/>
