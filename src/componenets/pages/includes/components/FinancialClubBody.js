@@ -59,26 +59,26 @@ export default function FinancialClubBody(props) {
                             
                         </h4>
                         <div className="container" style={{ width: "400px "}}>
-                            <article className="grey-text">
+                            <article className="grey-text text-darken-4">
                                 Seamlessly maximize user friendly communities whereas customer directed results.
                             </article><br />
                             {/* <form onSubmit={handleSubmit}>
                                 <div className="form-section-1 mt-25 row">
                                     <div className=" col s12" >
-                                        <label htmlFor="username" className="col s12 grey-text">Username</label>
+                                        <label htmlFor="username" className="col s12 grey-text text-darken-4">Username</label>
                                         <input onChange={handleChange} ref={nameRef} id="username" className="col s12 mt-50 ful l-w" placeholder="email address"  type="text" required/>
                                     </div>
                                 </div>
                                 <div className="form-section-1 mt-25 row">
                                     <div className=" col s12" >
-                                        <label htmlFor="email" className="col s12 grey-text">Email Address</label>
+                                        <label htmlFor="email" className="col s12 grey-text text-darken-4">Email Address</label>
                                         <input onChange={handleChange} id="email" className="col s12 mt-50 ful l-w" placeholder="email address"
                                             ref={emailRef} type="email" required/>
                                     </div>
                                 </div>
                                 <div className="form-section-1 mt-25 row">
                                     <div className=" col s12" >
-                                        <label htmlFor="phone" className="col s12 grey-text">Email Address</label>
+                                        <label htmlFor="phone" className="col s12 grey-text text-darken-4">Email Address</label>
                                         <input onChange={handleChange} id="phone" className="col s12 mt-50 ful l-w" placeholder="email address"
                                             ref={phoneNumberRef} type="tel" required/>
                                     </div>
@@ -114,27 +114,25 @@ export default function FinancialClubBody(props) {
                                     
                                 </h4>
                                 <div className="" style={{width:"400px"}}>
-                                    <p className="grey-text">
-                                        Seamlessly maximize user friendly communities whereas customer directed results.
-                                    </p><br/> 
+                                     
                                     {/* <PayButton amount={dataToPush} /> */}
                                      <form onSubmit={handleSubmit}>
                                         <div className="form-section-1 mt-25 row">
                                             <div className=" col s12" >
-                                                <label htmlFor="username" className="col s12 grey-text">Username</label>
+                                                <label htmlFor="username" className="col s12 grey-text text-darken-4">Username</label>
                                                 <input onChange={handleChange} ref={nameRef} id="username" className="col s12 mt-50 ful l-w" placeholder="email address"  type="text" required/>
                                             </div>
                                         </div>
                                         <div className="form-section-1 mt-25 row">
                                             <div className=" col s12" >
-                                                <label htmlFor="email" className="col s12 grey-text">Email Address</label>
+                                                <label htmlFor="email" className="col s12 grey-text text-darken-4">Email Address</label>
                                                 <input onChange={handleChange} id="email" className="col s12 mt-50 ful l-w" placeholder="email address"
                                                     ref={emailRef} type="email" required/>
                                             </div>
                                         </div>
                                         <div className="form-section-1 mt-25 row">
                                             <div className=" col s12" >
-                                                <label htmlFor="phone" className="col s12 grey-text">Phone Number</label>
+                                                <label htmlFor="phone" className="col s12 grey-text text-darken-4">Phone Number</label>
                                                 <input onChange={handleChange} id="phone" className="col s12 mt-50 ful l-w" placeholder="Phone number"
                                                     ref={phoneNumberRef} type="tel" required/>
                                             </div>
