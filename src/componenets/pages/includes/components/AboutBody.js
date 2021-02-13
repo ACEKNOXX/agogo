@@ -17,15 +17,15 @@ export default function AboutBody() {
                                 <div className="alittle-text mt-50 " >
 
                                     <div className="alittle-text-header  col s12 pb-25 left section-heading" >
-                                        <h5 className="primary-color">A little about Aurora</h5>
+                                        <h4 className="primary-color">A little about Aurora</h4>
                                         
                                     </div>
 
                                     <div className="col s12">
-                                        <p className=" alittle-text grey-text darken-3">
+                                        <p className=" alittle-text grey-text text-darken-4">
                                            We at Aurora saw a lot of people in the corporate private sector especially women were always broke and borrwing money to meet their financial needs
                                         </p>
-                                        <p className=" alittle-text grey-text darken-3">
+                                        <p className=" alittle-text grey-text text-darken-4">
                                             Many don’t know how to save, build investments or manage their lifestyle. Dependence on monthly salary without any other source of income also led to this initiative, thus we all need a refresh or restart in the approach to our finance
                                         </p><br/>
                                     </div>

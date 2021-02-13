@@ -4,7 +4,8 @@ import { useHistory } from 'react-router-dom';
 
 export default function PayButton(props) {
   const res = props.amount
-  const amount = 10000 
+  // const amount = 10000 
+  const amount = props.amount 
   const history = useHistory()
   
   // you can call this function anything
@@ -29,7 +30,7 @@ export default function PayButton(props) {
      var gu=(new Date()).getTime()
       const config = {
             reference:`${gu}`,
-            email: "user@example.com",
+            email: "mustapha.ddare@gmail.com",
             amount: amount*100,
             publicKey: 'pk_live_e09257868dcb4f294715010d6971277b28bfaba5'
         }
@@ -39,7 +40,7 @@ export default function PayButton(props) {
               <button className="btn-flat btn-primary green darken-4 white-text"
                   onClick={() => {
                 initializePayment(onSuccess, onClose)
-            }}>Proceed to Pay({amount})</button>
+            }}>Proceed to Pay</button>
         </div>
       );
   };
