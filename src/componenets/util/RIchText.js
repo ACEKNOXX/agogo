@@ -9,12 +9,16 @@ import { CircularProgress } from '@material-ui/core';
 
 
 var bodText,title,image,author
-var loading = false
-// const [image, setImage] = useState(null)
 
 
 
 export default class RichTextBox extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: false
+        };
+    }
     useStyles = ()=>{
         return makeStyles((theme) => ({
         root: {
@@ -48,7 +52,8 @@ export default class RichTextBox extends Component {
     }
     handleSubmit =async(e)=>{
         e.preventDefault();
-        loading=true
+        
+        this.setState({ loading : true })
         console.log(title, author, bodText)
         console.log(image.name)
         // console.log()
@@ -68,7 +73,7 @@ export default class RichTextBox extends Component {
                 }
                 console.log(dataToPush)
                 await firestore.collection('blogArticle').doc().set(dataToPush)
-
+                window.location.href="/admin"
             })
             .catch((error) => {
                 // Handle any errors
@@ -76,7 +81,8 @@ export default class RichTextBox extends Component {
         } catch (e) {
             
         }
-        loading=false 
+        this.setState({ loading : false })
+         
     }
     
     
@@ -148,11 +154,11 @@ render() {
                 <div className=" row">
                     <div className="form-section-1 container col s12">
                         <div className="col s12 p-2">
-                            <Button disabled={loading} onClick={this.handleSubmit}  id="submit-btn" className="btn-large col s5  btn-flat  ">
-                                {loading && 
+                            <Button disabled={this.state.loading} onClick={this.handleSubmit}  id="submit-btn" className="btn-large col s5  btn-flat  ">
+                                {this.state.loading && 
                                     <CircularProgress />
                                 }
-                                {!loading &&
+                                {!this.state.loading &&
                                     <span className="white-text">
                                     Ok, publish
                                     </span>  

@@ -15,16 +15,16 @@ export default function BlogArticle(props) {
         setLoading(true)
 
         firestore.collection("blogArticle").doc(id).get().then((item) => {
-            const items = item.data()
+            const items = item  
             
             setAritcle(items)
             console.log(items)
             // setAritcle(itms)
-           if (items.length == 0) {
+           if (items.data().length == 0) {
                 setIsEmpti(true)
             }
             setTimeout( ()=>{ }, 5000)
-            setLoading(false)
+            // setLoading(false)
         }).catch((e) => {
             
             console.log("error from snapshot",e)

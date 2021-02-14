@@ -191,9 +191,7 @@ export default function Signup() {
         </DialogContent>
         <DialogActions>
           
-          {/* <Button onClick={handleClose} color="primary">
-            Forget Password
-          </Button> */}
+   
         </DialogActions>
       </Dialog>
       {/* <Dialog open={open} onClose={handleClose} scroll={"body"}  aria-labelledby="form-dialog-title">

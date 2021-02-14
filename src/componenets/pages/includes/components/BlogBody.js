@@ -12,7 +12,8 @@ export default function BlogBody() {
         setLoading(true)
 
         firestore.collection("blogArticle").get().then((item) => {
-           const items = item.docs.map((doc) => doc)
+            const items = item.docs.map((doc) => doc)
+            console.log(items)
             setAritcle(items)
             // setAritcle(itms)
            if (items.length == 0) {
@@ -28,7 +29,7 @@ export default function BlogBody() {
     return (
         <div className="container">
             <div className="row">
-                <div className="col s12 m4 pt-50">
+                <div className="col s12 m3 pt-50">
                     <h4 style={{fontSize: "34px",color:"#002044"}}>
                         Related articles
                     </h4>
@@ -48,6 +49,7 @@ export default function BlogBody() {
                         </div>
                     </div>
                 </div>
+                <div className="col s12 m1"></div>
                 <div className="col s12 m8 pt-50">
                     <div className="row">
                         {loading && 

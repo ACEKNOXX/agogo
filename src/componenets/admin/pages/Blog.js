@@ -1,14 +1,34 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Sidebar from './../includes/Sidebar'
 import Header from './../includes/Header' 
 import Footer from './../includes/Footer'
 import TopHeader from './../includes/TopHeader'
-// import CourseTableRow from './../includes/widget/CourseTableRow'
+import BlogTableRow from './../includes/widget/BlogTableRow'
+import { firestore } from './../../../firebase'
 import { Link} from 'react-router-dom'
 import './../css/style.css'
 import './../css/style2.css'
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 export default function AdminBlogPanel() {
+    const [loading, setLoading] = useState(false)
+    const [courses,setCourses] = useState([])
+    
+    
+    useEffect(() => {
+        firestore.collection("blogArticle").get().then((item) => {
+            setLoading(true)
+            const items = item.docs.map((doc) => doc)
+            setCourses(items)
+            console.log(items)
+            // setCourses(itms)
+            setTimeout( ()=>{ }, 5000)
+            setLoading(false)
+        }).catch((e) => {
+            console.log("error from snapshot",e)
+        })
+    },[])
     return (
         <div>
              <Header />
@@ -40,8 +60,61 @@ export default function AdminBlogPanel() {
                                         </Link>
                                     </div>
                                 </div>
+                                <div className="row">
+                                    <div className="col s12">
+                                        <table  >
+                                            <thead className="grey lighten-5">
+                                            <tr className=" z-depth-2">
+                                                <th>
+                                                    <p>
+                                                    <label>
+                                                        <input type="checkbox" />
+                                                        <span></span>
+                                                    </label>
+                                                    </p>
+                                                </th>
+                                                <th>Title</th>
+                                                <th>Article</th>
+                                                <th>Author</th>
+                                                <th>status</th>
+                                            </tr>
+                                            </thead>
 
-                                
+                                           
+                                            
+                                            {!loading &&
+                                                <tbody>
+                                                    {courses.map((course)=> <BlogTableRow  article={course}/>)}
+                                                    {/* { courses.map((course)=> <p>{course.id}</p> )}  */}
+                                                </tbody>
+                                            }
+
+                                            
+                                        </table>
+                                         
+                                        {courses.length===0 &&
+                                                <div className="row" style={{margin:"20px 0px ",width:"100%"}}>
+                                                    <div className="col s12 m4"></div>
+                                                    <div className="col s12 m4 center">
+                                                {/* <CircularProgress className="center green-text" disableShrink  /> */}
+                                                        <h5>No Course uploaded</h5>
+                                                    </div>
+                                                    <div className="col s12 m4"></div>
+                                                </div>
+                                        }
+                                        {loading &&
+                                            <div className="row" style={{margin:"20px 0px ",width:"100%"}}>
+                                                <div className="col s12 m4"></div>
+                                                <div className="col s12 m4 center">
+                                                    <CircularProgress className="center green-text" disableShrink  />
+                                                </div>
+                                                <div className="col s12 m4"></div>
+                                            </div>
+                                        }
+                                          
+                                    </div>
+                                </div>
+                                {/* main */}
                                 
                             </div>
                         </div>

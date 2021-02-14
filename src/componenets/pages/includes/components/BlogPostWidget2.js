@@ -21,10 +21,8 @@ export default function BlogPostWidget2(props) {
                             {articlePost.title}
                         </h5>
                         <p>
-                            Seamlessly maximize user friendly communities 
-                            whereas customer directed results. Professionally 
-                            productize impactful portals 
-                            through standardized ROI.<br/>
+                            {/* {articlePost.bodyText.substring(0, 50)} */}
+                            <br />
                             <small>May 30, 2020</small>
                             
                         </p>
