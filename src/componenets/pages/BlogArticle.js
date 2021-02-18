@@ -4,6 +4,8 @@ import Footer from './includes/widgets/Footer'
 import {firestore} from './../../firebase'
 import BlogPostShimmer2 from './includes/components/BlogPostShimmer2'
 import BlogPostWidget2 from './includes/components/BlogPostWidget2'
+import SIngleBlogBody from './includes/components/SIngleBlogBody'
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 export default function BlogArticle(props) {
     const id = props.match.params.id;
@@ -18,13 +20,13 @@ export default function BlogArticle(props) {
             const items = item  
             
             setAritcle(items)
-            console.log(items)
+            // console.log(items).
             // setAritcle(itms)
            if (items.data().length == 0) {
                 setIsEmpti(true)
             }
             setTimeout( ()=>{ }, 5000)
-            // setLoading(false)
+            setLoading(false)
         }).catch((e) => {
             
             console.log("error from snapshot",e)
@@ -34,11 +36,18 @@ export default function BlogArticle(props) {
         <div>
             <Navbar />
                 {loading && 
-                    <BlogPostShimmer2 />
+                    // <BlogPostShimmer2 />
+                    <div className="row mt-100">
+                        <div className="col s12 m4"></div>
+                        <div className="col s12 m4 center">
+                            <CircularProgress />
+                        </div>
+                        <div className="col s12 m4"></div>
+                    </div>
                 }
                 {aritcle &&
                     <div>
-                    <BlogPostWidget2 dets={aritcle} />
+                        <SIngleBlogBody article={aritcle} />
                     </div>
                     
                 }

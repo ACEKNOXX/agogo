@@ -12,7 +12,7 @@ export default function IndexBanner() {
                         <div className="col s12  m6 ">
                             <div className="">
                                 <div className="banner-index-holder">
-                                    <div style={{lineHeight:"1.6"}} className="white-text index-banner-header" > 
+                                    <div style={{lineHeight:"1.3"}} className="white-text index-banner-header" > 
                                         FINANCIAL PLANNING WITH  
                                         <span>
                                             <i> Aurora</i>

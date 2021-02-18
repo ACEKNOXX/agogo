@@ -52,7 +52,7 @@ export default function Sidebar() {
                     <img src="../assets/Aurora_icons/bin.svg" alt="" />
                 </ul>
             </div>
-                    <div className="bg-primary dashboard-sidebar-footer " style={{height:"300px"}}>
+                <div className="bg-primary dashboard-sidebar-footer " style={{height:"300px"}}>
                 <ul className="collection">
                     <li className="collection-item ">
                         <Link  to="#logout"  className="modal-trigger white-text">

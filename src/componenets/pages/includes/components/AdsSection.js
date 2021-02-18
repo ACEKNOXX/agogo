@@ -15,7 +15,7 @@ const [loading, setLoading] = useState(false)
            const items = item.docs.map((doc) => doc)
             setCourses(items)
             // setCourses(itms)
-
+            // console.log(item.data().status)
            if (items.length == 0) {
                 setIsEmpti(true)
             }
@@ -24,6 +24,7 @@ const [loading, setLoading] = useState(false)
         }).catch((e) => {
             console.log("error from snapshot",e)
         })
+
     }, [])
     return (
         <div>

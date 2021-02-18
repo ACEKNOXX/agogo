@@ -30,7 +30,8 @@ import SingleExploreBanner from './pages/SignlePageExplore'
 import FinancialPlan from './pages/FinancialClub'
 import Blog from './pages/Blog'
 import BlogArticle from './pages/BlogArticle'
-
+import LoginPage from './auth/LoginPage'
+import SignupPage from './auth/SignupPage'
 
 class App extends Component{
   render(){
@@ -40,7 +41,9 @@ class App extends Component{
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/signup" component={Signup} />
+            <Route path="/signupPage" component={SignupPage} />
             <Route path="/login" component={Login} />
+            <Route path="/loginPage" component={LoginPage} />
             <Route path="/explore" component={Explore} />
             <Route path="/about" component={About} />
             <Route path="/blog" component={Blog} />

@@ -16,7 +16,7 @@ import { storage,firestore } from './../../../firebase'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { useAuth } from './../../../context/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
-
+import AdvertTable from './../includes/widget/AdvertTable'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -188,7 +188,7 @@ export default function Adverts() {
                                     
                                 </div>
                                 
-                            
+                                <AdvertTable />
                                 {/* <!-- main body --> */}
                             
                             </div>
