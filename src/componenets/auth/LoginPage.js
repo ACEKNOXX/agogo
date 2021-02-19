@@ -42,8 +42,11 @@ export default function LoginPage() {
             <Navbar />
 
             <div className="container row">
-                <div className="col s12 mt-50">
-                    <i className="material-icons medium">account_circle</i>
+                <div className="col s12 m4"></div>
+                <div className="col s12 m4 mt-50" style={{ padding: "16px" }}>
+                    <div className="center">
+                        <i className="material-icons center medium">account_circle</i>
+                    </div>
                     <h4 className="center">Welcome back !</h4>
                     <div className="modal-content " style={{width:"350px !important"}}>
                         <div className="row" id="login-form" >
@@ -97,12 +100,12 @@ export default function LoginPage() {
                                     </div>
                                     <div className="full-w center">
                                         <p>Don’t have account yet? 
-                                            <Link to="/signup"  className="green-text">Join Aurora today</Link> 
+                                            <Link to="/"  className="green-text">Join Aurora today</Link> 
                                         </p>
                                     </div>
                                     <div className="full-w center">
                                         <p> 
-                                            <Link to="/signup"  className="green-text">Forget Password</Link> 
+                                            <Link to="/"  className="green-text">Forget Password</Link> 
                                         </p>
                                     </div>
                                 </div>
@@ -113,6 +116,7 @@ export default function LoginPage() {
                         </div>
                     </div>
                 </div>
+                <div className="col s12 m4"></div>
             </div>
             <Footer />
         </div>
