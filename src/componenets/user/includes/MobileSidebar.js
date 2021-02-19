@@ -26,6 +26,13 @@ const useStyles = makeStyles({
   },
 });
 
+const useStyless = makeStyles((theme) => ({
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 4,
+    color: '#fff',
+  },
+}));
+
 export default function MobileSidebar() {
   const { currentUser, logout,refresh } = useAuth();
 
@@ -36,7 +43,23 @@ export default function MobileSidebar() {
     bottom: false,
     right: false,
   });
-
+  
+  const [open, setOpen] = React.useState(false);
+  const classess = useStyless();
+   const handleLogout = async (e) => {
+    e.preventDefault()
+    
+      setOpen(true)
+      
+      
+      await logout()
+      
+      setTimeout(async () => {
+          // await refresh()
+          window.location.reload()
+      }, 5000);
+      
+  }
   const toggleDrawer = (anchor, open) => (event) => {
     // if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
     if (event.key === 'Tab' || event.key === 'Shift') {
@@ -93,7 +116,13 @@ export default function MobileSidebar() {
             <ListItemText primary={'Community'} />
           </Link>
         </ListItem>
-        
+        <ListItem>
+            {currentUser && 
+              <button type="button" onClick={handleLogout}  className="btn-flat btn-primary btn-oultine  transparent black-text modal-trigger">
+                  Logout
+              </button>
+            } 
+        </ListItem>
       </List>
       
     </div>
