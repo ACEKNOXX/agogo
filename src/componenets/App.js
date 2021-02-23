@@ -6,7 +6,7 @@ import './css/style4.css';
 import './css/mobile.css';
 import './css/modal.css';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashedRouter as Router, Switch, Route } from 'react-router-dom'
 import AuthProvider from './../context/AuthContext'
 import Home from './pages/Home'
 import Signup from './auth/Signup';
