@@ -34,6 +34,7 @@ import Blog from './pages/Blog'
 import BlogArticle from './pages/BlogArticle'
 import LoginPage from './auth/LoginPage'
 import SignupPage from './auth/SignupPage'
+import PageNotFound from './404'
 
 class App extends Component{
   render(){
@@ -42,6 +43,7 @@ class App extends Component{
         <AuthProvider>
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route  path="*" component={Home} />
             <Route path="/signup" component={Signup} />
             <Route path="/signupPage" component={SignupPage} />
             <Route path="/login" component={Login} />
