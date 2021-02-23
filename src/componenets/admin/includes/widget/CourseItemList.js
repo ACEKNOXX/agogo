@@ -8,20 +8,23 @@ import Button from '@material-ui/core/Button';
 
 export default function CourseItemList(props) {
     const id = props.id;
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [courseItem,setCourseItem] = useState([])
     const {currentUser,firebaseC} = useAuth();
-    
+    const [isEmti,setIsEmti] = useState(false)
     
     useEffect(() => {
         firestore.collection("courses").doc(id).collection("courseLessons").get().then((doc) => {
             // console.log(doc.docs)
             const items = doc.docs.map((doc) => doc)
             setCourseItem(items)
-            // doc.forEach((docc) => {
-            // // doc.data() is never undefined for query doc snapshots
-            //     console.log(doc.id, " => ", doc.data());
-            // });
+            
+            if (items.length == 0) {
+                setIsEmti(true)
+                setLoading(false)
+            }
+
+            setLoading(false)
 
         }).catch((error) => {
             console.log("Error getting document:", error);
@@ -49,13 +52,22 @@ export default function CourseItemList(props) {
                     {courseItem.map((course)=> <ItemListingWidget  course={course}/>)}
                 </tbody>
             </table>
-            {courseItem.length==0 &&
+            {loading &&
                 <div className="row" style={{margin:"20px 0px ",width:"100%"}}>
                     <div className="col s12 m4"></div>
                     <div className="col s12 m4 center">
                         <CircularProgress className="center green-text" disableShrink  />
                     </div>
                     <div className="col s12 m4"></div>
+                </div>
+            }
+            {isEmti &&
+                <div className="row" style={{margin:"20px 0px ",width:"100%"}}>
+                    <div className="col s12 m3"></div>
+                    <div className="col s12 m6 center">
+                        <h3>No Content Uploaded</h3> 
+                    </div>
+                    <div className="col s12 m3"></div>
                 </div>
             }
         </div>

@@ -135,7 +135,7 @@ export default function ClubBodyOne(props) {
                     <div className="container learn-online ">
                         <h4 className="primary-color center container mt-50" >
                             <b>
-                                {financialPlan}
+                                {financialPlan} mobile
                             </b>
                             
                         </h4>
@@ -174,7 +174,12 @@ export default function ClubBodyOne(props) {
                                     <div className="col s12">
                                         <label>Investment club plan</label>
                                     <select ref={investmentplanRef} onChange={handleChange} className="browser-default">
-                                            <option value=""  >choose option</option>
+                                            
+                                            
+                                            {financialPlan === "Investment Club" && 
+                                                <option value="0"  >choose option</option>
+                                            }
+                                        
                                             {financialPlan === "Investment Club" && 
                                                 <option value="10000">₦10000/12months</option>
                                             }

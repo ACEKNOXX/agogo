@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 
 import Button from '@material-ui/core/Button';
 import { Link,useHistory } from 'react-router-dom'
-import { useAuth } from '../../context/AuthContext'
+import { useAuth } from './../../context/AuthContext'
 import './../css/App.css'
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -46,7 +46,9 @@ export default function Login() {
             setError('')
             setLoading(true)
             await login(emailRef.current.value,passwordRef.current.value)
-            history.push('/user')
+            // history.push('/user')
+            history.push('/admin')
+          
         } catch (e) {
             console.log(e)
             let errMsg = e.message;
@@ -60,9 +62,18 @@ export default function Login() {
         Login
       </Button>
 
-      <Dialog open={openn} onClose={handleClose} scroll={'body'} aria-labelledby="form-dialog-title">
+      <Dialog open={openn} scroll={'body'} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">
-          <h4 className="center">Welcome back !</h4>
+          <div className="right">
+            <button onClick={handleClose} className="btn-flat transparent center" type="button" style={{
+              width:"15px"
+            }}>
+              <i className="material-icons">close</i>
+            </button>
+          </div>
+          <div className="col s12 center">
+            <h4 className="center">Welcome back !</h4>
+          </div>
         </DialogTitle>
         <DialogContent>
           <DialogContentText className="center">

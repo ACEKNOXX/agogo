@@ -9,6 +9,8 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
+import { useHistory } from 'react-router-dom';
+
 // import InputLabel from '@material-ui/core/InputLabel';
 // import MenuItem from '@material-ui/core/MenuItem';
 // import FormHelperText from '@material-ui/core/FormHelperText';
@@ -41,6 +43,7 @@ selectEmpty: {
 
 export default function AddCourseVideoButton(props) {
     const courseId=props.courseId
+    const history = useHistory()
     console.log("coourseId==", courseId)
     var courseDocId;
     if (props.courseId==null) {
@@ -97,7 +100,10 @@ export default function AddCourseVideoButton(props) {
                 // await firestore.collection('courses').doc().set(dataToPush)
                 //  history.push('/admincourseUpload')
                 await firestore.collection('courses').doc(courseDocId)
-                .collection('courseLessons').doc().set(dataToPush);
+                    .collection('courseLessons').doc().set(dataToPush);
+                
+                 history.push('/admin')
+                
             })
             .catch((e) => {
                 
@@ -139,7 +145,6 @@ export default function AddCourseVideoButton(props) {
         <Dialog
             fullScreen={fullScreen}
             open={open}
-            onClose={handleClose}
             scroll={"body"}
             aria-labelledby="responsive-dialog-title"
             // aria-labelledby="scroll-dialog-title"
@@ -148,9 +153,13 @@ export default function AddCourseVideoButton(props) {
         <form onSubmit={handleSubmit}>
                   
         <DialogTitle id="responsive-dialog-title">
-                      {"Add Course Video"}
+            <div className="col s12 right">
+                <button className="btn-flat grey lighten-4 center " onClick={handleClose}> <i className="material-icons">close</i> </button>
+            </div>     
+            {"Add Course Video"}
             <div className="row">
                 <div className="col s12">
+                              
                     {error &&
                         <div className="row alert-err" style={{ padding: "8px 8px" }} >
                             <span className="white-text  mt-25" >
@@ -168,7 +177,7 @@ export default function AddCourseVideoButton(props) {
                     <div className="form-section-1 row">
                         <div className=" col s12" >
                             <label  className="col s12 grey-text">Lesson Title</label>
-                            <input className="col s12 mt-50 full-w" ref={lessonTitleRef} placeholder="Tutor name" type="text" required/>
+                            <input className="col s12 mt-50 full-w" ref={lessonTitleRef} placeholder="Lesson title" type="text" required/>
                         
                         </div>
                     </div>
@@ -183,7 +192,7 @@ export default function AddCourseVideoButton(props) {
                             <div className="form-section-1 row">
                                 <div className=" col s12" >
                                     <label htmlFor="email" className="col s12 grey-text">Duration</label>
-                                              <input className="col s12 mt-50 full-w" ref={lessonDurationRef} placeholder=""
+                                              <input className="col s12 mt-50 full-w" ref={lessonDurationRef} placeholder="4hr 3min"
                                                   type="text" required/>
                                 </div>
                             </div>

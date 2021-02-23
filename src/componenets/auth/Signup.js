@@ -42,11 +42,7 @@ export default function Signup() {
         try {
             setError('')
             setLoading(true)
-            // console.log(user.user.uid);
-            // console.log("username",usernameRef.current.value);
-            // console.log("email address", emailRef.current.value)
-            // console.log("pass",passwordRef.current.value)
-            // console.log("agagon")
+           
             var name = usernameRef.current.value
             var currentemail = emailRef.current.value
             var user= await signup(emailRef.current.value, passwordRef.current.value)
@@ -92,7 +88,7 @@ export default function Signup() {
         }} onClick={handleClickOpen}>
         SignUp
       </Button>
-         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title" className="center" style={{width:"90% !important"}}>
                     <h4 className="center">Pick Link  Plan</h4>
                     <small className="center">Enjoy unlimited learning experience</small>
