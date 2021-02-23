@@ -2,11 +2,9 @@ import React from 'react'
 import { usePaystackPayment } from 'react-paystack'
 import { useHistory } from 'react-router-dom';
 
-export default function PayButton(props) {
-  const res = props.amount
-  // const amount = 10000 
-  const amount = props.amount 
-  const history = useHistory()
+export default function PayButton2(props) {
+  const res = props.dataToPush
+  console.log(res)
   
   // you can call this function anything
   const onSuccess = (reference) => {
@@ -19,7 +17,7 @@ export default function PayButton(props) {
 
   // you can call this function anything
   const onClose = () => {
-  console.log(res)
+    console.log(res)
 
     // implementation for  whatever you want to do when the Paystack dialog closed.
     console.log('closed')
@@ -30,8 +28,8 @@ export default function PayButton(props) {
      var gu=(new Date()).getTime()
       const config = {
             reference:`${gu}`,
-            email: "mustapha.ddare@gmail.com",
-            amount:6000,
+            email: res.email,
+            amount:600000,
             publicKey: 'pk_live_e09257868dcb4f294715010d6971277b28bfaba5'
         }
       const initializePayment = usePaystackPayment(config)

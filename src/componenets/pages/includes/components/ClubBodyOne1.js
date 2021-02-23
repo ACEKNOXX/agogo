@@ -1,11 +1,8 @@
-import React,{useRef,useState, useEffect} from 'react'
-import PayButton from './../../../util/PayButton'
+import React,{useState,useEffect} from 'react'
+import PayButton2 from './../../../util/PayButton2'
 
-
-
-export default function ClubBodyTwo(props) {
-  
-const financialPlan = props.plan;
+export default function ClubBodyOne1(props) {
+  const financialPlan = props.plan;
     
     
 
@@ -81,7 +78,7 @@ const financialPlan = props.plan;
                                             <button className="btn btn-large disabled">Submit</button>
                                         }
                                         {ok &&
-                                        <PayButton dataToPush={dataToPush} />
+                                        <PayButton2 dataToPush={dataToPush} />
                                         }
                                     </form>
                                 </div>
@@ -97,4 +94,5 @@ const financialPlan = props.plan;
             </div>
         // </div>
     )
+    
 }

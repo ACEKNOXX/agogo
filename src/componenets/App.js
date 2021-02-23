@@ -28,6 +28,8 @@ import NyProfile from './user/pages/MyProfile'
 import EditProfile from './user/pages/EditProfile'
 import SingleExploreBanner from './pages/SignlePageExplore'
 import FinancialPlan from './pages/FinancialClub'
+import ClubOne1 from './pages/ClubOne1'
+import ClubTwo2 from './pages/ClubTwo2'
 import Blog from './pages/Blog'
 import BlogArticle from './pages/BlogArticle'
 import LoginPage from './auth/LoginPage'
@@ -50,6 +52,8 @@ class App extends Component{
             <Route path="/blogArticle/:id" component={BlogArticle} />
             <Route path="/single-course/:id" component={SingleExploreBanner} />
             <Route path="/financialClub/:plan" component={FinancialPlan} />
+            <Route path="/financialClubOne" component={ClubOne1} />
+            <Route path="/financialClubTwo" component={ClubTwo2} />
             <PrivateRoute path='/user' component={UserHome} />
             <PrivateRoute path='/userMyCourses' component={MyCourses} />
             <PrivateRoute path="/userProfile" component={NyProfile} />

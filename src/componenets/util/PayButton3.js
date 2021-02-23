@@ -3,11 +3,8 @@ import { usePaystackPayment } from 'react-paystack'
 import { useHistory } from 'react-router-dom';
 
 export default function PayButton(props) {
-  const res = props.amount
-  // const amount = 10000 
-  const amount = props.amount 
-  const history = useHistory()
-  
+    const res = props.dataToPush
+    console.log(res)
   // you can call this function anything
   const onSuccess = (reference) => {
     // Implementation for whatever you want to do with reference and after success call.
@@ -30,8 +27,8 @@ export default function PayButton(props) {
      var gu=(new Date()).getTime()
       const config = {
             reference:`${gu}`,
-            email: "mustapha.ddare@gmail.com",
-            amount:10000,
+            email: res.email,
+            amount:1000000,
             publicKey: 'pk_live_e09257868dcb4f294715010d6971277b28bfaba5'
         }
       const initializePayment = usePaystackPayment(config)

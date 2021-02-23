@@ -30,7 +30,7 @@ export default function PayButton(props) {
       const config = {
             reference:`${gu}`,
             email: res.email,
-            amount:5000,
+            amount:500000,
             publicKey: 'pk_live_e09257868dcb4f294715010d6971277b28bfaba5'
         }
       const initializePayment = usePaystackPayment(config)

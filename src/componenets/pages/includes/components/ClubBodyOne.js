@@ -1,221 +1,110 @@
-import React,{useRef,useState} from 'react'
-import { usePaystackPayment } from 'react-paystack'
-import { useHistory } from 'react-router-dom';
-import {firestore} from './../../../../firebase'
+import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function ClubBodyOne(props) {
 
-    const history = useHistory()
-  
-    // ononoo
     const financialPlan = props.plan;
-    const [amount,setAmount] = useState(5000)
-    
-
-    const emailRef = useRef(null)
-    const nameRef = useRef(null)
-    const phoneNumberRef = useRef(null)
-    // const passwordRef = useRef(null)
-    const investmentplanRef = useRef(null)
-    const [ok, setOk] = useState(false)
-
-    var dataToPush 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    }
-    const handleChange = (e) => {
-        var a, b, c, d;
-        a = emailRef.current.value
-        b = nameRef.current.value
-        c = phoneNumberRef.current.value
-        d = investmentplanRef.current.value
-        // e = passwordRef.current.value
-        setAmount(d)
-        console.log(d)
-        console.log("amount", amount)
-        console.log(a,b,c,d)
-        if ( a.length !==0 && b.lenghth !==0 && c.length !==0 && d.length !==0 ){
-            setOk(true)
-        } else {
-            setOk(false)
-        }
-    }
-    const handleChangePlan = () => {
-        var mm = investmentplanRef.current.value
-        setAmount(mm)
-        console.log("new amount",amount)
-    }
-    // oononon
-    
-    
-  // you can call this function anything
-  const onSuccess = async(reference) => {
-    // Implementation for whatever you want to do with reference and after success call.
-    console.log(reference);
-    // redirect to whatsapp groupd
-    //   try {
-    //       var a, b, c, d;
-    //       a = emailRef.current.value
-    //       b = nameRef.current.value
-    //       c = phoneNumberRef.current.value
-    //       d = investmentplanRef.current.value
-    //       await firestore.collection("financialClubUsers")
-    //           .doc().set({
-    //               "displayName": b,
-    //               "email": a,
-    //               "phone": c,
-    //               "investment_plan": financialPlan,
-    //               "reference": reference
-    //           })
-            
-            
-    //       window.location.href = "https://chat.whatsapp.com/G0I0FDFns0G3QLKjoSKknv"
-
-    //   } catch (e) {
-        
-    //       console.log(e.message)
-    //   }
-
-  };
-
-  // you can call this function anything
-  const onClose = async() => {
-
-    // implementation for  whatever you want to do when the Paystack dialog closed.
-    console.log('closed')
-    // history.push("http://google.com")
-      try {
-          var a, b, c, d;
-          a = emailRef.current.value
-          b = nameRef.current.value
-          c = phoneNumberRef.current.value
-          d = investmentplanRef.current.value
-          await firestore.collection("financialClubUsers")
-              .doc().set({
-                  "displayName": b,
-                  "email": a,
-                  "phone": c,
-                  "investment_plan": financialPlan,
-                  "amount_paid":d,
-                  "reference": "dkjakndkn"
-              })
-            
-            
-          window.location.href = "https://chat.whatsapp.com/G0I0FDFns0G3QLKjoSKknv"
-
-      } catch (e) {
-        
-          console.log(e.message)
-      }
-  }
-
-    const PaystackHookExample = () => {
-        
-        var gu = (new Date()).getTime()
-        const config = {
-            reference: `${gu}`,
-            email: emailRef.current.value,
-            amount: amount * 100,
-            publicKey: 'pk_live_e09257868dcb4f294715010d6971277b28bfaba5'
-        }
-        const initializePayment = usePaystackPayment(config)
         return (
-            <div>
-                <button className="btn-flat btn-primary green darken-4 white-text"
-                    onClick={() => {
-                        initializePayment(onSuccess, onClose)
-                    }}>Pay with paystack</button>
-            </div>
-        );
-    };
-    return (
     <div className=" ">
-             <div className="dashboard-snippet hide-on-med-and-up pt-100   full-w " >
-
-                    <div className="container learn-online ">
-                        <h4 className="primary-color center container mt-50" >
-                            <b>
-                                {financialPlan} mobile
-                            </b>
-                            
-                        </h4>
-                        <div className="container" style={{ width: "400px "}}>
-                            
-                            <form onSubmit={handleSubmit}>
-                                <div className="form-section-1 mt-25 row">
-                                    <div className=" col s12" >
-                                        <label htmlFor="username" className="col s12 grey-text text-darken-4">Username</label>
-                                        <input onChange={handleChange} ref={nameRef} id="username" className="col s12 mt-50 ful l-w" placeholder="username"  type="text" required/>
-                                    </div>
-                                </div>
-                                <div className="form-section-1 mt-25 row">
-                                    <div className=" col s12" >
-                                        <label htmlFor="phone" className="col s12 grey-text text-darken-4">Phone number</label>
-                                        <input onChange={handleChange} id="phone" className="col s12 mt-50 ful l-w" placeholder="phone number"
-                                            ref={phoneNumberRef} type="tel" required/>
-                                    </div>
-                                </div>
-                                <div className="form-section-1 mt-25 row">
-                                    <div className=" col s12" >
-                                        <label htmlFor="email" className="col s12 grey-text text-darken-4">Email Address</label>
-                                        <input onChange={handleChange} id="email" className="col s12 mt-50 ful l-w" placeholder="email address"
-                                            ref={emailRef} type="email" required/>
-                                    </div>
-                                </div>
-                                {/* <div className="form-section-1 mt-25 row">
-                                    <div className=" col s12" >
-                                        <label htmlFor="password" className="col s12 grey-text text-darken-4">Password</label>
-                                        <input onChange={handleChange} id="password" className="col s12 mt-50 ful l-w" placeholder="Password"
-                                            ref={passwordRef} type="password" required/>
-                                    </div>
-                                </div> */}
-                                
-                                <div className="form-section-1 mt-25 row">
-                                    <div className="col s12">
-                                        <label>Investment club plan</label>
-                                    <select ref={investmentplanRef} onChange={handleChange} className="browser-default">
-                                            
-                                            
-                                            {financialPlan === "Investment Club" && 
-                                                <option value="0"  >choose option</option>
-                                            }
+                {/* <div className="row hide-on-med-and-down pb-100"> */}
+                <div className="row  pb-100">
+                    <div className="col s12 m1"></div>
+                    <div className="col s12  m5">
+                        <div className="container mt-100" >
+                            <div className="mt-50">
+                                <h4 className="primary-color center" >
+                                    <b>
+                                        {financialPlan}
+                                    </b>
+                                    
+                                </h4>
+                                <div className="row">
+                                    <div className="col s12 m6">
+                                        <div className="card-panel  pb-50" style={{
                                         
-                                            {financialPlan === "Investment Club" && 
-                                                <option value="10000">₦10000/12months</option>
-                                            }
+                                            borderRadius:"20px",padding:"0px",height:"300px",backgroundColor:"#FAFAFA"}}>
+                                            <div className="center pt-25" style={{
+                                                background: "rgba(216, 20, 58, 0.8)", height: "100px",
+                                                borderRadius: "20px 20px 0px 0px"
+                                            }}>
+                                                <h5 className="white-text" style={{
+                                                    fontWeight:"bold",
+                                                    fontSize:"28px",
+                                                    lineHeight: "46px"
+                                                }}>Investment Club </h5>
+                                            </div>
+                                            <div className="center">
+                                                <span>
+                                                    <h4 className="pt-25" style={{fontWeight:"normal",
+                                                    lineHeight:"28px",color:"#353535"}}>
+                                                    <small style={{ fontSize: "20px" }}> ₦</small><b>6000</b>
+                                                    </h4>
+                                                    <small style={{fontWeight:"normal",
+                                                    fontSize:"16px",
+                                                    lineHeight: "23px",color:"rgba(53, 53, 53, 0.8)"}}>
+                                                    for 6 months</small>
+                                                </span>
                                             
-                                            {financialPlan === "Investment Club" && 
-                                                <option value="6000">₦6000/6months</option>
-                                            }
-                                            {financialPlan  === "Savings club" &&
-                                                <option value="5000">₦5000/One-off Fee</option>
-                                            }
-                                            
-                                        </select>
+                                            </div>
+                                            <div className="center mt-25">
+                                                <div className="col s3"></div>
+                                                <Link to="/financialClubOne" className="col s6  btn-flat   btn-primary transparent waves-effect waves-light btn modal-trigger"
+                                                    style={{ height: "45px" }}>
+                                                    Join Aurora
+                                                </Link >
+                                                <div className="col s3"></div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="form-section-1 mt-25 row">
-                                    <div className=" col s12" >
-                                        {!ok &&
-                                            <button type="submit" className="btn-flat btn-primary green darken-4 white-text"
-                                            >Proceed to Pay({amount})</button>
-                                        }
+                                    <div className="col s12 m6">
+                                     <div className="card-panel  pb-50" style={{
+                                    
+                                        borderRadius:"20px",padding:"0px",height:"300px",backgroundColor:"#FAFAFA"}}>
+                                        <div className="center pt-25" style={{
+                                            background: "rgba(216, 20, 58, 0.8)", height: "100px",
+                                            borderRadius: "20px 20px 0px 0px"
+                                        }}>
+                                            <h5 className="white-text" style={{
+                                                fontWeight:"bold",
+                                                fontSize:"28px",
+                                                lineHeight: "46px"
+                                            }}>Investment Club </h5>
+                                        </div>
+                                        <div className="center">
+                                            <span>
+                                                <h4 className="pt-25" style={{fontWeight:"normal",
+                                                lineHeight:"28px",color:"#353535"}}>
+                                                <small style={{ fontSize: "20px" }}> ₦</small><b>10000</b>
+                                                </h4>
+                                                <small style={{fontWeight:"normal",
+                                                fontSize:"16px",
+                                                lineHeight: "23px",color:"rgba(53, 53, 53, 0.8)"}}>
+                                                for 12 months</small>
+                                            </span>
                                         
-                                        {ok &&
-                                            <PaystackHookExample />
-                                        }
+                                        </div>
+                                        <div className="center mt-25">
+                                            <div className="col s3"></div>
+                                            <Link to="/financialClubTwo" className="col s6  btn-flat   btn-primary transparent waves-effect waves-light btn modal-trigger"
+                                                style={{ height: "45px" }}>
+                                                Join Aurora
+                                            </Link >
+                                            <div className="col s3"></div>
+                                        </div>
                                     </div>
                                 </div>
-
-                            </form>
+                                </div>
+                            </div>
+                            
                         </div>
-                        <img src="assets/Aurora_images/Courses dashboard Aurora 1-min.png" 
-                        className=" hide-on-med-and-down container z-depth-2 responsive-img full-w materialboxed show-on-med-and-down hide-on-med-and-up" width="100%"   alt="" />
                     </div>
-
-                </div>
-                
+                    <div className="col s12 m1"></div>
+                    <div className="col s12 m5   hide-on-med-and-down" style={{ padding: "0px !important", background: "transparent !important" }}>
+                            <div className="dashboard-snippet-image z-depth-3"></div>
+                    </div>
+                    </div>
             </div>
         // </div>
     )
+    
 }
