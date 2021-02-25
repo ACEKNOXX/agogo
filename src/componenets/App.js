@@ -6,7 +6,7 @@ import './css/style4.css';
 import './css/mobile.css';
 import './css/modal.css';
 import React, { Component } from 'react';
-import { HashedRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import AuthProvider from './../context/AuthContext'
 import Home from './pages/Home'
 import Signup from './auth/Signup';
@@ -43,7 +43,7 @@ class App extends Component{
         <AuthProvider>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route  path="*" component={Home} />
+            {/* <Route  path="*" component={Home} /> */}
             <Route path="/signup" component={Signup} />
             <Route path="/signupPage" component={SignupPage} />
             <Route path="/login" component={Login} />
