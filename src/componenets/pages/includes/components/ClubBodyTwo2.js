@@ -54,7 +54,7 @@ export default function ClubBodyOne1(props) {
                                      <form onSubmit={handleSubmit}>
                                         <div className="form-section-1 mt-25 row">
                                             <div className=" col s12" >
-                                                <label htmlFor="username" className="col s12 grey-text text-darken-4">Username</label>
+                                                <label htmlFor="username" className="col s12 grey-text text-darken-4">Full name</label>
                                                 <input onChange={(e)=>handleChange(e)} name="username" id="username"
                                                 className="col s12 mt-50 full-w" placeholder="username" type="text" required />
                                             </div>

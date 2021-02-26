@@ -30,24 +30,27 @@ export default function ExploreBody() {
         <div className="container">
             <div className="row">
                 <div className="col s12 m10">
-                    <div className=" pb-25 left section-heading" >
-                        <h4 className="primary-color" style={{fontWeight:"bold"}}>Trending public finance courses</h4>
-                        <div className="row  full-w  hide-on-med-and-up" style={{marginTop:"-30px",width:"400px"}}>
+                    <div className=" pb-25 left " >
+                        <div className="col s12">
+                            <h4 className="primary-color" style={{fontWeight:"bold"}}>Trending public finance courses</h4>
+                        </div>
+                        
+                        {/* <div className="row  full-w  hide-on-med-and-up" style={{marginTop:"-30px",width:"400px"}}>
                             <div className="col s7"></div>
                             <div className="col s3 pink" style={{ height: "15px" }}></div>
                             <div className="col s2"></div>
                             
-                        </div>
-                        <div className="row  full-w  hide-on-med-and-down" style={{marginTop:"-30px",width:"400px"}}>
+                        </div> */}
+                        {/* <div className="row  full-w  hide-on-med-and-down" style={{marginTop:"-30px",width:"400px"}}>
                             <div className="col s7"></div>
                             <div className="col s3"></div>
                             <div className="col s2 pink" style={{height:"15px"}}></div>
                             
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className=" col m2 s12 pt-25 ">
-                    <h6 className="mt-25 right">
+                    <h6 className=" right">
                         <Link to="/"  className=" green-text" style={{textDecoration:"underline"}}>View all</Link>
                     </h6>
                 </div>

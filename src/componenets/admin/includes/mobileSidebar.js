@@ -1,72 +1,144 @@
-import React from 'react'
+import React from 'react';
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
+import Icon from '@material-ui/core/Icon';
+import Login from "./../../auth/Login";
+import Signup from './../../auth/Signup'
 import { Link} from 'react-router-dom'
+import { useAuth } from './../../../context/AuthContext'
+
+
+const useStyles = makeStyles({
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: 'auto',
+  },
+});
+
+const useStyless = makeStyles((theme) => ({
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 4,
+    color: '#fff',
+  },
+}));
 
 export default function MobileSidebar() {
-    return (
-<div className="bg-primary">
-    <div className="col m3 bg-primary hide-on-med-and-down" style={{height:"100% !important",position:"fixed"}}>
-        <div className="container ">
-            <div className="dashboard-logo">
-                <Link to="/">
-                    <img src="./../../../assets/logos/logo white version.svg" height="90px" alt="mm"/>
-                </Link>
-            </div>
-            <div className="dashboard-sidebar">
-                <ul className="collection">
-                    <li className="collection-item active">
-                        <img src="./../../../assets/Aurora_images/svg/docs.svg" alt="" />
-                        <span className="title white-text p-2">Home</span>
-                        <Link to="/user" className="secondary-content">
-                            <img src="./../../../assets/Aurora_images/svg/dot.svg" alt="" />
-                        </Link>
-                    </li>
-                    <li className="collection-item ">
-                        <Link to="/userMyCourses" className="white-text">
-                            <img src="assets/svg/courses_icon.svg" alt="" />
-                            <span className="title ">My Courses</span>
-                            <Link to="" className="secondary-content">
-                                <img src="assets/svg/dot.svg" alt="" />
-                            </Link>
-                        </Link>
-                    </li>
-                    
-                    <li className="collection-item ">
-                        <Link to="/userProfile" className="white-text">
-                            <img src="assets/svg/person.svg" alt="" />
-                            <span className="title ">My account</span>
-                            <Link to="#!" className="secondary-content">
-                                <img src="assets/svg/dot.svg" alt="" />
-                            </Link>
-                        </Link>
-                    </li>
-                    <li className="collection-item ">
-                        <Link to="/" className="modal-trigger white-text">
-                            <img src="assets/svg/docs_sidebar.svg" alt="" />
-                            <span className="title ">Community</span>
-                            <Link to="" className="secondary-content">
-                                <img src="assets/svg/dot.svg" alt="" />
-                            </Link>
-                        </Link>
-                    </li>
+  const { currentUser, logout,refresh } = useAuth();
 
-                    <img src="../assets/Aurora_icons/bin.svg" alt="" />
-                </ul>
-            </div>
-                <div className="bg-primary dashboard-sidebar-footer " style={{height:"300px"}}>
-                <ul className="collection">
-                    <li className="collection-item ">
-                        <Link  to="#logout"  className="modal-trigger white-text">
-                            <img src="assets/svg/logout.svg" alt="" />
-                            <span className="title white-text p-2">Logout</span>
-                            <Link to="#!" className="secondary-content">
-                                <img src="../assets/svg/dot.svg" alt="" />
-                            </Link>
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  const classes = useStyles();
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+  
+  const [open, setOpen] = React.useState(false);
+  const classess = useStyless();
+   const handleLogout = async (e) => {
+    e.preventDefault()
+    
+      setOpen(true)
+      
+      
+      await logout()
+      
+      setTimeout(async () => {
+          // await refresh()
+          window.location.reload()
+      }, 5000);
+      
+  }
+  const toggleDrawer = (anchor, open) => (event) => {
+    // if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    if (event.key === 'Tab' || event.key === 'Shift') {
+      
+    return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <div
+      className={clsx(classes.list, {
+        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+      })}
+      role="presentation"
+      // onClick={toggleDrawer(anchor, false)}
+      // onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {currentUser != null &&
+          
+          <ListItem button key={currentUser.displayName}>
+            <Link to="/user" className="black-text">
+              <ListItemIcon><i className="material-icons  medium ">account_circle</i> </ListItemIcon>
+              <ListItemText primary={currentUser.displayName} />
+            </Link>
+          </ListItem>
+        }
+        <Divider />
+        {/* {['Home', 'Explore', 'Blog', 'About','Contact'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))} */}
+        <ListItem button key={'Home'}>
+          <Link to="/" className="black-text">
+            <ListItemText primary={'Home'} />
+          </Link>
+        </ListItem>
+        <ListItem button key={'My Courses'}>
+          <Link to="/userMyCourses" className="black-text">
+            <ListItemText primary={'My Courses'} />
+          </Link>
+        </ListItem>
+        <ListItem button key={'My Account'}>
+          <Link to="/userProfile" className="black-text">
+            <ListItemText primary={'My Account'} />
+          </Link>
+        </ListItem>
+        <ListItem button key={'Community'}>
+          <Link to="/about" className="black-text">
+            <ListItemText primary={'Community'} />
+          </Link>
+        </ListItem>
+        <ListItem>
+            {currentUser && 
+              <button type="button" onClick={handleLogout}  className="btn-flat btn-primary btn-oultine  transparent black-text modal-trigger">
+                  Logout
+              </button>
+            } 
+        </ListItem>
+      </List>
+      
     </div>
-</div>
-    )
+  );
+
+  return (
+    <div>
+      {['left'].map((anchor) => (
+        <React.Fragment key={'left'}>
+          <button type="button" className="btn-flat center"
+            onClick={toggleDrawer('left', true)}><Icon className="white-text">menu</Icon></button>
+          <Drawer   anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
+            {list('left')}
+          </Drawer>
+        </React.Fragment>
+      ))}
+    </div>
+  );
 }

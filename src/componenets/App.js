@@ -34,7 +34,7 @@ import Blog from './pages/Blog'
 import BlogArticle from './pages/BlogArticle'
 import LoginPage from './auth/LoginPage'
 import SignupPage from './auth/SignupPage'
-import PageNotFound from './404'
+
 
 class App extends Component{
   render(){
