@@ -15,7 +15,18 @@ export default function PriceCalculator() {
     const [open, setOpen] = React.useState(false);
     const handleClickOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
+    const principal = useRef(null)
+    const ratePer = useRef(null)
+    const timePer = useRef(null)
 
+    const handelChange = () => {
+        
+    }
+
+    const handleSubmit = (e) => {
+        e.prevenetDefault()
+        console.log(principal.current.value,ratePer.current.value,timePer.current.value)
+    }
 
     return (
     <div>
@@ -49,7 +60,7 @@ export default function PriceCalculator() {
                 </div>
             </div>        
             <div className="">
-                
+                <form onSubmit={handleSubmit}>
                 <div className="" style={{width:"100% !important"}}>
                     <div className="col  s12 left " >
                         <h5 style={{fontWeight: "bold",
@@ -60,7 +71,7 @@ export default function PriceCalculator() {
                     </div>
                     
                     <p>How much do you want to save?</p>
-                    <div className=" col s12 full-w" style={{ display: "flex" }}>
+                    <div className=" col s12 full-w" style={{ display: "flex",justifyContent:"space-between" }}>
                                 <input id="last_name" placeholder="NGN 0.00" type="text" className="validate"
                                     style={{width:"75% !important"}} />
                         <select style={{width:"25% !important"}}>
@@ -81,6 +92,7 @@ export default function PriceCalculator() {
                         <button className="btn-flat btn- col s12 green center white-text">Calculate</button>
                     </div>
                 </div>
+                </form>
             </div>
         </DialogContent>
         <DialogActions>

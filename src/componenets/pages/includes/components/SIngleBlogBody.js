@@ -11,7 +11,8 @@ export default function SIngleBlogBody(props) {
     return (
         <div className="container">
             <div className="row">
-                <div className="col s12 m9">
+                <div className="col s12 m3"></div>
+                <div className="col s12 m6">
                     <br />
                     <img src={postdata.imageUrl} width="100%" style={{
                         minHeight:"400px"
@@ -29,7 +30,7 @@ export default function SIngleBlogBody(props) {
                     {/* </article> */}
                     
                 </div>
-                <div className="col s12 m8"></div>
+                <div className="col s12 m3"></div>
             </div>
         </div>
     )
