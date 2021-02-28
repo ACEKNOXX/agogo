@@ -55,9 +55,9 @@ export default function Home() {
             </Backdrop>
             <Navbar />
             <IndexBanner />
-            <AdsSection />
-            <PopularCourses />
+            {/* <PopularCourses /> */}
             <HowItWorks />
+            <AdsSection />
             <DashboardSnippet />
             <LittleAbout />
             <AboutCeo />

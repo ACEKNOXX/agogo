@@ -11,16 +11,17 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
     "@tinymce/tinymce-react": "^3.10.1",
-    "antd": "^4.12.3",
     "dotenv": "^8.2.0",
     "firebase": "^8.2.6",
     "firebase-admin": "^9.4.2",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-material-ui-carousel": "^2.2.1",
     "react-paystack": "^3.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-slideshow-image": "^3.4.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

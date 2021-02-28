@@ -12,9 +12,10 @@ const [loading, setLoading] = useState(false)
         setLoading(true)
 
         firestore.collection("adverts").get().then((item) => {
-           const items = item.docs.map((doc) => doc)
+           const items = item.docs.map((doc) => doc.data())
             setCourses(items)
             // setCourses(itms)
+            console.log("t---",items)
             // console.log(item.data().status)
            if (items.length == 0) {
                 setIsEmpti(true)
@@ -29,15 +30,24 @@ const [loading, setLoading] = useState(false)
     return (
         <div>
             <div className="row">
-                <div className="col s12 m4"></div>
-                <div className="col s12 m4 center">
-                    {/* {courses.map((course)=> `${course}--` )} */}
-                    {/* <CircularProgress /> */}
-                    {/* <ImageSlider imgs={courses}/> */}
+                <div className="col s12 m3"></div>
+                <div className="col s12 m6 center">
+                   
+                    {loading &&
+                        <CircularProgress />
+                    }
+                    {courses.length === 0 && 
+                        "No Current ADS"
+                    }
+                     <ImageSlider items={courses}/>
+                  
 
                 </div>
-                <div className="col s12 m4"></div>
+                <div className="col s12 m3"></div>
             </div>
+            {/* <div className="col s12">
+                <ImageSlider items={courses}/>
+            </div> */}
         </div>
     )
 }

@@ -1,55 +1,43 @@
 import React from 'react';
-import { Carousel } from 'antd';
-import 'antd/dist/antd.css';
+import Carousel from 'react-material-ui-carousel'
+import { Paper, Button } from '@material-ui/core'
 
-const contentStyle = {
-        height: '160px',
-        color: '#fff',
-        lineHeight: '160px',
-        textAlign: 'center',
-        background: '#364d79',
-    }
-
-export default function ImageSlider(props) {
-    const imgs = props.imgs 
+export default function ImageSlider(props)
+{
+    const items=props.items
+    // var items = [
+    //     {
+    //         name: "Random Name #1",
+    //         description: "Probably the most random thing you have ever seen!"
+    //     },
+    //     {
+    //         name: "Random Name #2",
+    //         description: "Hello World!"
+    //     }
+    // ]
 
     return (
-        <div>
-            <Carousel className="grey" autoplay>
-                {imgs.map((img) => `<div><img src="${img}" height="300px" alt=""/></div> `)
-                }
+        <Carousel style={{
+            border:"2px dashed red"
+        }}>
+            {
+                items.map( (item, i) => <Item key={i} item={item} /> )
+            }
+        </Carousel>
+    )
+}
 
-                {/* <div>
-                    <h3 style={{
-                        height: '160px',
-                        color: '#fff',
-                        lineHeight: '160px',
-                        textAlign: 'center',
-                        background: '#364d79',
-                    }
-                    }>2</h3>
-                </div>
-                <div>
-                <h3 style={{
-                            height: '160px',
-                            color: '#fff',
-                            lineHeight: '160px',
-                            textAlign: 'center',
-                            background: '#364d79',
-                        }
-                    }>3</h3>
-                </div>
-                <div>
-                <h3 style={{
-                            height: '160px',
-                            color: '#fff',
-                            lineHeight: '160px',
-                            textAlign: 'center',
-                            background: '#364d79',
-                        }
-                    }>4</h3>
-                </div> */}
-            </Carousel>
+function Item(props)
+{
+    return (
+        <div className="center">
+            
+            <img src={props.item.url} width="95%" HEIGT alt=""/>
+            <h2>{props.item.title}</h2>
+            {/* <p>{props.item.description}</p> */}
+            <Button className="CheckButton">
+                Check it out!
+            </Button>
         </div>
     )
 }
