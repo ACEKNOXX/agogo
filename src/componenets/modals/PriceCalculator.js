@@ -13,19 +13,32 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 export default function PriceCalculator() {
     const [open, setOpen] = React.useState(false);
+    const [loading, setLoading] = React.useState(false);
     const handleClickOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
     const principal = useRef(null)
     const ratePer = useRef(null)
     const timePer = useRef(null)
 
-    const handelChange = () => {
+    const handleChange = () => {
         
     }
 
     const handleSubmit = (e) => {
-        e.prevenetDefault()
-        console.log(principal.current.value,ratePer.current.value,timePer.current.value)
+        e.preventDefault()
+        setLoading(true)
+        try {
+            console.log(principal.current.value, ratePer.current.value, timePer.current.value)
+            var p = principal.current.value
+            var r = ratePer.current.value * 0.01
+            var t = timePer.current.value
+            const interest =(p*r*t)/100
+            console.log(interest);
+        } catch (e) {
+            
+        }
+        
+        setLoading(false)
     }
 
     return (
@@ -72,24 +85,35 @@ export default function PriceCalculator() {
                     
                     <p>How much do you want to save?</p>
                     <div className=" col s12 full-w" style={{ display: "flex",justifyContent:"space-between" }}>
-                                <input id="last_name" placeholder="NGN 0.00" type="text" className="validate"
+                                <input ref={principal} onChange={handleChange} placeholder="NGN 0.00" type="text" className="validate"
                                     style={{width:"75% !important"}} />
                         <select style={{width:"25% !important"}}>
                             <option value="" selected>month</option>
                             <option value="1">Option 1</option>
                         </select>
                     </div>
-                    <p>For how long?</p>
+                    <p>For how long?(in months)</p>
                     <div className=" col s12 full-w" style={{ display: "flex" }}>
-                                <input placeholder="0" type="text" className="validate" style={{ width: "100% !important" }}/>
+                        <input placeholder="0" type="text" ref={timePer} onChange={handleChange}  className="validate" style={{ width: "100% !important" }}/>
                     </div>
                     <p>Interest rate in % per annum</p>
                     <div className=" col s12 full-w" style={{ display: "flex" }}>
-                        <input placeholder="0" type="text" className="validate" style={{ width: "100% !important" }}/>
+                        <input placeholder="0" type="text" ref={ratePer} onChange={handleChange} className="validate" style={{ width: "100% !important" }}/>
                     
                     </div>
                     <div className="full-w row pt-25">
-                        <button className="btn-flat btn- col s12 green center white-text">Calculate</button>
+                        
+                        <button disabled={loading} className="btn-flat btn- col s12 green center white-text">
+                                       
+                            {loading &&
+                            <CircularProgress disableShrink  />
+                            }
+                            {!loading &&
+                                 "Calculate"
+                            }
+                        </button>
+                                    
+                        
                     </div>
                 </div>
                 </form>

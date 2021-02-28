@@ -44,7 +44,7 @@ export default function CourseCard(props) {
                         <div className="col s12 card-context-body-details " >
                             
                                 <p>
-                                    {course.courseShortDescription.substring(0,250)}...
+                                    {course.courseShortDescription.substring(0,150)}...
                                 </p>
                                 
                         </div>

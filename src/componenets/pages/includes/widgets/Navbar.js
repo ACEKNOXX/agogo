@@ -122,8 +122,13 @@ const Navbar = () => {
                         
                     
                     { currentUser && 
+                        // <li className="right">
+                        //     <Link to="/user" className="btn-floating btn-flat green center white-text " >
+                        //         <i className="material-icons">account_circle</i>
+                        //     </Link>
+                        // </li> 
                         <li className="right">
-                            <Link to="/user" className="btn-floating btn-flat green center white-text " >
+                            <Link to="/admin" className="btn-floating btn-flat green center white-text " >
                                 <i className="material-icons">account_circle</i>
                             </Link>
                         </li> 
