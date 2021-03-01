@@ -36,8 +36,8 @@ export default function Footer() {
                         </h6>
                         <div className="mt-25 footer-nav">
                             <Link to="/" className="white-text"><h6 className="white-text">Help & support</h6> </Link>
-                            <Link to="/" className="white-text"><h6 className="white-text">Terms of use</h6> </Link>
-                            <Link to="/" className="white-text"><h6 className="white-text">Contact Us</h6> </Link>
+                            <Link to="/tNc" className="white-text"><h6 className="white-text">Terms of use</h6> </Link>
+                            <Link to="/contact" className="white-text"><h6 className="white-text">Contact Us</h6> </Link>
                             <Link to="/" className="white-text"><h6 className="white-text">Privacy</h6> </Link>
                         </div>
                     </div>

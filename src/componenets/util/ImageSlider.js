@@ -17,9 +17,7 @@ export default function ImageSlider(props)
     // ]
 
     return (
-        <Carousel style={{
-            border:"2px dashed red"
-        }}>
+        <Carousel >
             {
                 items.map( (item, i) => <Item key={i} item={item} /> )
             }
@@ -32,12 +30,10 @@ function Item(props)
     return (
         <div className="center">
             
-            <img src={props.item.url} width="95%" HEIGT alt=""/>
+            <img src={props.item.url} width="95%"  alt=""/>
             <h2>{props.item.title}</h2>
             {/* <p>{props.item.description}</p> */}
-            <Button className="CheckButton">
-                Check it out!
-            </Button>
+           
         </div>
     )
 }

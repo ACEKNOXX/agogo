@@ -37,10 +37,12 @@ const [loading, setLoading] = useState(false)
                         <CircularProgress />
                     }
                     {courses.length === 0 && 
-                        "No Current ADS"
+                        ""
                     }
-                     <ImageSlider items={courses}/>
-                  
+                    {courses.length > 0 &&
+                        <ImageSlider items={courses}/>
+                    }
+                                      
 
                 </div>
                 <div className="col s12 m3"></div>

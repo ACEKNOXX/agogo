@@ -36,6 +36,13 @@ background-size:cover;
 width: 100%;
 height: 600px;
 }
+.terms-banner{
+    background:url("./../../assets/Aurora_images/terms and condition page image-min.png");
+    background-repeat: no-repeat;
+    background-position:left center;
+    width: 100%;
+    height: 600px; 
+}
 .about-hero-overlay,.about-hero-overlay-2{
 background-image: linear-gradient(-90deg,#002044,rgb(4, 9, 14));
 position: absolute;

@@ -34,7 +34,8 @@ import Blog from './pages/Blog'
 import BlogArticle from './pages/BlogArticle'
 import LoginPage from './auth/LoginPage'
 import SignupPage from './auth/SignupPage'
-
+import TermsAndConditions from './pages/TermsAndConditions'
+import Contact from './pages/Contact'
 
 class App extends Component{
   render(){
@@ -50,7 +51,9 @@ class App extends Component{
             <Route path="/loginPage" component={LoginPage} />
             <Route path="/explore" component={Explore} />
             <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
             <Route path="/blog" component={Blog} />
+            <Route path="/tNc" component={TermsAndConditions} />
             <Route path="/blogArticle/:id" component={BlogArticle} />
             <Route path="/single-course/:id" component={SingleExploreBanner} />
             <Route path="/financialClub/:plan" component={FinancialPlan} />
