@@ -30,8 +30,8 @@ function Item(props)
     return (
         <div className="center">
             
-            <img src={props.item.url} width="95%"  alt=""/>
-            <h2>{props.item.title}</h2>
+            <img src={props.item.url} width="100%"  alt=""/>
+            <h4>{props.item.title}</h4>
             {/* <p>{props.item.description}</p> */}
            
         </div>

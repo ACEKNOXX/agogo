@@ -49,7 +49,7 @@ export default function BlogBody() {
                         </div>
                     </div>
                 </div>
-                <div className="col s12 m1"></div>
+                {/* <div className="col s12 m1"></div> */}
                 <div className="col s12 m8 pt-50">
                     <div className="row">
                         {loading && 
@@ -63,7 +63,7 @@ export default function BlogBody() {
                         }
                         {aritcle &&
                             <div>
-                               
+                                
                                 {
                                     aritcle.map((post) => <BlogPostWidget2 dets={post} />)
                                 }

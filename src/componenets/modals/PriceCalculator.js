@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState,useEffect } from 'react';
 
 import Button from '@material-ui/core/Button';
 import { Link,useHistory } from 'react-router-dom'
@@ -19,28 +19,41 @@ export default function PriceCalculator() {
     const principal = useRef(null)
     const ratePer = useRef(null)
     const timePer = useRef(null)
-
+    var pp = 0
+    var rr = 0
+    var tt = 0
+    var si = 0
+    const [sis,setSis] = useState(null) 
     const handleChange = () => {
-        
+        pp = principal.current.value
+        rr = ratePer.current.value
+        tt = timePer.current.value
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault()
         setLoading(true)
         try {
             console.log(principal.current.value, ratePer.current.value, timePer.current.value)
             var p = principal.current.value
-            var r = ratePer.current.value * 0.01
+            var r = ratePer.current.value
             var t = timePer.current.value
-            const interest =(p*r*t)/100
-            console.log(interest);
+            const interest = (p * r * t) / 100
+            si = interest
+            console.log(interest)
+            alert(si)
+            setSis(si)
         } catch (e) {
             
         }
+            setLoading(false)
         
-        setLoading(false)
+        
     }
 
+    useEffect(() => {
+        
+    }, [pp,rr,tt,si])
     return (
     <div>
             
@@ -57,7 +70,7 @@ export default function PriceCalculator() {
        
         <Dialog
             open={open}
-            onClose={handleClose}
+            // onClose={handleClose}
             scroll={"body"}
             aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title" className="center" style={{width:"100% !important"}}>
@@ -82,15 +95,14 @@ export default function PriceCalculator() {
                         <small>Choose any pricing plan today and learn how to grow your investments.</small>
                         <hr className="red-text" style={{border:"1px solid #eee"}} />
                     </div>
-                    
-                    <p>How much do you want to save?</p>
-                    <div className=" col s12 full-w" style={{ display: "flex",justifyContent:"space-between" }}>
-                                <input ref={principal} onChange={handleChange} placeholder="NGN 0.00" type="text" className="validate"
+                    <br />
+                    <div className="col s12 ">
+                        How much do you want to save?
+                    </div>            
+                    <div className=" col s12 full-w" style={{  }}>
+                        <input ref={principal} onChange={handleChange}
+                            placeholder="NGN 0.00" type="text" className="validate"
                                     style={{width:"75% !important"}} />
-                        <select style={{width:"25% !important"}}>
-                            <option value="" selected>month</option>
-                            <option value="1">Option 1</option>
-                        </select>
                     </div>
                     <p>For how long?(in months)</p>
                     <div className=" col s12 full-w" style={{ display: "flex" }}>
@@ -103,7 +115,7 @@ export default function PriceCalculator() {
                     </div>
                     <div className="full-w row pt-25">
                         
-                        <button disabled={loading} className="btn-flat btn- col s12 green center white-text">
+                        <button disabled={loading} className="btn-flat btn-large btn- col s12 green center white-text">
                                        
                             {loading &&
                             <CircularProgress disableShrink  />
@@ -114,6 +126,29 @@ export default function PriceCalculator() {
                         </button>
                                     
                         
+                    </div>
+                    <div className="row"> 
+                        <div className="col s12">
+{/*                             
+                            <p>
+                                
+                                Saving {pp && pp} NGN monthly for { tt && tt} months at an 
+                                interest rate of { rr && rr}% per annum will result in accrued interests of:
+                            </p> */}
+                        </div>
+
+                        <div className="grey lighten-3 col s12 " style={{
+                            borderRadius: "5px",
+                            height: "40px", marginBottom:"10px"
+                        }}>
+                            <div className="col s6 left">
+                                <h6>Interest</h6>
+                            </div>
+                            <div className="col s6 ">
+                                <h6 className="right">NGN {sis}</h6>
+                            </div>
+                        </div>
+                                   
                     </div>
                 </div>
                 </form>

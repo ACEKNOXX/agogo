@@ -8,37 +8,12 @@ export default function BlogPostWidget2(props) {
     return (
         <div>
              <div className="col m6 s12">
-                {/* <div className="card z-depth-0" style={{
-                    border:"2px dashed red"
+                <div className="card" style={{
+                    height: "550px"
+                
                 }}>
-                    <div className="card-image">
-                        <img width="384px" height="400  px" src={articlePost.imageUrl} alt="" />
-                    </div>
-                    <div className="card-content left transparent">
-                        <h5 style={{
-                            fontWeight: "bold",
-                            fontSize: "24px",
-                            lineHeight: "34px", color: "#002044"
-                        }}>
-                            {articlePost.title}
-                        </h5>
-                        <p>
-                            
-                            <br />
-                            <small>May 30, 2020</small>
-                            
-                        </p>
-                        <Link to={`/blogArticle/${id}`} className=" btn-flat btn-primary btn-oultine transparenet ">
-                            See more...
-                        </Link>
-                    </div>
-
-                </div> */}
-                {/*  */}
-
-                <div className="card">
                     <div className="card-image" style={{
-                        borderRadius:"10px"
+                        borderRadius: "10px", minHeight: "350px"
                     }}>
                        <img width="384px" height="400px" src={articlePost.imageUrl} alt=""  style={{
                         borderRadius:"10px 10px 0px 0px"
@@ -52,10 +27,10 @@ export default function BlogPostWidget2(props) {
                     <div className="card-content">
                         <span className="card-title" style={{
                             fontWeight: "bold",
-                            fontSize: "24px",
+                            fontSize: "20px",
                             lineHeight: "34px", color: "#002044"
                         }}>
-                            {articlePost.title}
+                            {articlePost.title.substring(0, 50)} ...
                         </span>
                         
                         {/* <p>{articlePost.bodyText.substring(0, 50)}</p> */}
