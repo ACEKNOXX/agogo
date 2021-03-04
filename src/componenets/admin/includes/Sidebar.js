@@ -13,11 +13,13 @@ export default function Sidebar() {
             </div>
             <div className="dashboard-sidebar">
                 <ul className="collection">
-                    <li className="collection-item active">
-                        <img src="../assets/svg/home_icon.svg" alt="" />
-                        <span className="title white-text p-2">Home</span>
-                        <Link to="/" className="secondary-content">
-                            <img src="../../assets/svg/dot.svg" alt="" />
+                    <li className="collection-item ">
+                        <Link to="/admin" className="white-text">
+                            <img src="assets/svg/courses_icon.svg" alt="" />
+                            <span className="title ">Home</span>
+                            <Link to="" className="secondary-content">
+                                <img src="assets/svg/dot.svg" alt="" />
+                            </Link>
                         </Link>
                     </li>
                     <li className="collection-item ">
@@ -39,7 +41,7 @@ export default function Sidebar() {
                         </Link>
                     </li>
                     <li className="collection-item ">
-                        <Link to="Https://t.me/twitwisavages " className="modal-trigger white-text">
+                        <Link to="/" className="modal-trigger white-text">
                             <img src="assets/svg/community.svg" alt="" />
                             <span className="title ">Community</span>
                             <Link to="#!" className="secondary-content">

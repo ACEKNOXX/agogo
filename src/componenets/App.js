@@ -36,48 +36,52 @@ import LoginPage from './auth/LoginPage'
 import SignupPage from './auth/SignupPage'
 import TermsAndConditions from './pages/TermsAndConditions'
 import Contact from './pages/Contact'
+import EventGallery from './pages/EventGallery'
 
-class App extends Component{
-  render(){
-    return (
-      <Router>
-        <AuthProvider>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            {/* <Route  path="*" component={Home} /> */}
-            <Route path="/signup" component={Signup} />
-            <Route path="/signupPage" component={SignupPage} />
-            <Route path="/login" component={Login} />
-            <Route path="/loginPage" component={LoginPage} />
-            <Route path="/explore" component={Explore} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/blog" component={Blog} />
-            <Route path="/tNc" component={TermsAndConditions} />
-            <Route path="/blogArticle/:id" component={BlogArticle} />
-            <Route path="/single-course/:id" component={SingleExploreBanner} />
-            <Route path="/financialClub/:plan" component={FinancialPlan} />
-            <Route path="/financialClubOne" component={ClubOne1} />
-            <Route path="/financialClubTwo" component={ClubTwo2} />
-            <PrivateRoute path='/user' component={UserHome} />
-            <PrivateRoute path='/userMyCourses' component={MyCourses} />
-            <PrivateRoute path="/userProfile" component={NyProfile} />
-            <PrivateRoute path='/userEditProfile' component={EditProfile} />
-            <PrivateRoute path='/admin' component={AdminHome} />
-            <PrivateRoute path="/admincourses" component={Courses} />
-            <PrivateRoute path="/admincourseUpload" component={CoursesUpload} />
-            <PrivateRoute path="/adminAdvert" component={Adverts} />
-            <PrivateRoute path="/adminBlogPanel" component={AdminBlogPanel} />
-            <PrivateRoute path="/adminAddBlogArticle" component={AddBlogArticle} />
-            <PrivateRoute path="/adminAddCourseItem/:id" component={AddCourseItem} />
-            <PrivateRoute path='/richtext' component={RichTextBox} />
-          </Switch>
-        </AuthProvider>
-      </Router>
-    );
-  }
+
+export default class App extends Component {
+    render() {
+        return (
+          <AuthProvider>
+            <Router> 
+              <AuthProvider>
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  {/* <Route path="/#/*" component={Home} /> */}
+                  <Route path="/signup" component={Signup} />
+                  <Route path="/signupPage" component={SignupPage} />
+                  <Route path="/login" component={Login} />
+                  <Route path="/loginPage" component={LoginPage} />
+                  <Route path="/explore" component={Explore} />
+                  <Route path="/eventGallery" component={EventGallery} />
+                  <Route path="/about" component={About} />
+                  <Route path="/contact" component={Contact} />
+                  <Route path="/blog" component={Blog} />
+                  <Route path="/tNc" component={TermsAndConditions} />
+                  <Route path="/blogArticle/:id" component={BlogArticle} />
+                  <Route path="/single-course/:id" component={SingleExploreBanner} />
+                  <Route path="/financialClub/:plan" component={FinancialPlan} />
+                  <Route path="/financialClubOne" component={ClubOne1} />
+                  <Route path="/financialClubTwo" component={ClubTwo2} />
+                  <PrivateRoute path='/user' component={UserHome} />
+                  <PrivateRoute path='/userMyCourses' component={MyCourses} />
+                  <PrivateRoute path="/userProfile" component={NyProfile} />
+                  <PrivateRoute path='/userEditProfile' component={EditProfile} />
+                  <PrivateRoute path='/admin' component={AdminHome} />
+                  <PrivateRoute path="/admincourses" component={Courses} />
+                  <PrivateRoute path="/admincourseUpload" component={CoursesUpload} />
+                  <PrivateRoute path="/adminAdvert" component={Adverts} />
+                  <PrivateRoute path="/adminBlogPanel" component={AdminBlogPanel} />
+                  <PrivateRoute path="/adminAddBlogArticle" component={AddBlogArticle} />
+                  <PrivateRoute path="/adminAddCourseItem/:id" component={AddCourseItem} />
+                  <PrivateRoute path='/richtext' component={RichTextBox} />
+                </Switch>
+              </AuthProvider>
+            </Router>
+          </AuthProvider>
+        )
+    }
 }
 
-export default App;
 
 

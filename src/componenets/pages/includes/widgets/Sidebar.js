@@ -90,7 +90,9 @@ export default function Sidebar() {
         {currentUser != null &&
           
           <ListItem button key={currentUser.displayName}>
-            <Link to="/user" className="black-text">
+            {/* <Link to="/user" className="black-text"> */}
+            <Link to="/admin" className="black-text">
+            
               <ListItemIcon><i className="material-icons medium ">account_circle</i> </ListItemIcon>
               <ListItemText primary={currentUser.displayName} />
             </Link>
@@ -133,7 +135,7 @@ export default function Sidebar() {
       {!currentUser && 
         <List>
             <ListItem>
-              <Link to="/LoginPage" className="right btn-flat btn-primary white-text green darken-4">Login</Link>
+              <Link to="/loginPage" className="right btn-flat btn-primary white-text green darken-4">Login</Link>
               <span className="white-text">aa</span>
               {/* <Link to="/SignupPage" className="right btn-flat btn-primary transparent">Signup</Link> */}
               <Signup />

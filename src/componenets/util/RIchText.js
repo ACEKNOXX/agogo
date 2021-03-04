@@ -73,7 +73,7 @@ export default class RichTextBox extends Component {
                 }
                 console.log(dataToPush)
                 await firestore.collection('blogArticle').doc().set(dataToPush)
-                window.location.href="/admin"
+                window.location.href="/"
             })
             .catch((error) => {
                 // Handle any errors

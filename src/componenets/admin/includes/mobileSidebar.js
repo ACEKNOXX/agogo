@@ -2,17 +2,12 @@ import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import Icon from '@material-ui/core/Icon';
-import Login from "./../../auth/Login";
-import Signup from './../../auth/Signup'
 import { Link} from 'react-router-dom'
 import { useAuth } from './../../../context/AuthContext'
 
@@ -97,23 +92,23 @@ export default function MobileSidebar() {
           </ListItem>
         ))} */}
         <ListItem button key={'Home'}>
-          <Link to="/" className="black-text">
+          <Link to="/admin" className="black-text">
             <ListItemText primary={'Home'} />
           </Link>
         </ListItem>
         <ListItem button key={'My Courses'}>
-          <Link to="/userMyCourses" className="black-text">
-            <ListItemText primary={'My Courses'} />
+          <Link to="/admincourses" className="black-text">
+            <ListItemText primary={'Courses'} />
           </Link>
         </ListItem>
         <ListItem button key={'My Account'}>
-          <Link to="/userProfile" className="black-text">
-            <ListItemText primary={'My Account'} />
+          <Link to="/adminAdvert" className="black-text">
+            <ListItemText primary={'Advert'} />
           </Link>
         </ListItem>
         <ListItem button key={'Community'}>
-          <Link to="/about" className="black-text">
-            <ListItemText primary={'Community'} />
+          <Link to="/adminBlogPanel" className="black-text">
+            <ListItemText primary={'Blog'} />
           </Link>
         </ListItem>
         <ListItem>

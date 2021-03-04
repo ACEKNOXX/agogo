@@ -81,8 +81,11 @@ const Navbar = () => {
                                  />
                         </div>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to="/explore"  className="grey-text text-darken-3">Explore</Link>
+                    </li> */}
+                    <li>
+                        <Link to="/eventGallery"  className="grey-text text-darken-3">Event Gallery</Link>
                     </li>
                     <li>
                         <Link to="/blog" className="grey-text text-darken-3">Blog</Link>

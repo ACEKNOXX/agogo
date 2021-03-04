@@ -83,7 +83,9 @@ export default function MobileSidebar() {
         {currentUser != null &&
           
           <ListItem button key={currentUser.displayName}>
-            <Link to="/user" className="black-text">
+            {/* <Link to="/user" className="black-text"> */}
+            <Link to="/admin" className="black-text">
+
               <ListItemIcon><i className="material-icons  medium ">account_circle</i> </ListItemIcon>
               <ListItemText primary={currentUser.displayName} />
             </Link>
