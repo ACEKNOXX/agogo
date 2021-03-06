@@ -58,7 +58,7 @@ export default function Home() {
             {/* <PopularCourses /> */}
             <HowItWorks />
             <AdsSection />
-            <DashboardSnippet />
+            {/* <DashboardSnippet /> */}
             <LittleAbout />
             <AboutCeo />
             <Feedback />

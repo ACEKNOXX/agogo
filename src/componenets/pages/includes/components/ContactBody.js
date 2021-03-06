@@ -40,7 +40,7 @@ export default function ContactBody() {
                     paddingTop:"0px !important"
                 }}>
                     <div className="full-w" style={{
-                        border:"2px dashed red"
+                        // border:"2px dashed red"
                     }}>
                         <div className="row">
                             <div className="col s12 m6">
@@ -69,7 +69,7 @@ export default function ContactBody() {
                                 <img src="./../../../../assets/Aurora_images/3.jpg" 
                                     className="responsive-img full-w materialboxed 
                                 hide-on-med-and-down" width="100%" style={{
-                                        marginTop: "-32px",
+                                        marginTop: "-30px",
                                         marginRight:"-100px",
                                         height: "35     0px !important"
                                     }} alt="" />
@@ -77,6 +77,10 @@ export default function ContactBody() {
                         </div>
                         <img src="./../../../../assets/Aurora_images/3.jpg" 
                                 className="responsive-img full-w materialboxed show-on-med-and-down hide-on-med-and-up" width="100%"   alt="" />
+                    </div>
+
+                    <div className="container row">
+                        <div className="col s12 m2"></div>
                     </div>
                     {/* <div className="row">
                         <div className="col s12 m3 l3"></div>
