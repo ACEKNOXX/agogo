@@ -80,7 +80,54 @@ export default function ContactBody() {
                     </div>
 
                     <div className="container row">
-                        <div className="col s12 m2"></div>
+                        <div className="col s12 center"><h3>Connect with on our socials</h3></div>
+                        <div className="col s12 ">
+                            
+                            <div className="col s2 center">
+                                <a className=" btn-floating white-text btn-flat btn-large center pink " href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                    <img width="30px" style={{
+                                        marginTop:"15px"
+                                    }} src="./../../../../assets/Aurora_images/svg/instagram.svg" alt="ig"/>
+                                </a>
+                            </div>
+                            <div className="col s2 center">
+                                <a className=" btn-floating white-text btn-flat btn-large center blue " href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                    <img width="30px" style={{
+                                        marginTop:"15px"
+                                    }} src="./../../../../assets/Aurora_images/svg/twitter.svg" alt="ig"/>
+                                </a>
+                            </div>
+                            <div className="col s2 center">
+                                <a className=" btn-floating white-text btn-flat btn-large center blue darken-1 " href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                    <img width="15px" style={{
+                                        marginTop:"15px"
+                                    }} src="./../../../../assets/Aurora_images/svg/facebook.svg" alt="ig"/>
+                                </a>
+                            </div>
+                            <div className="col s2 center">
+                                <a className=" btn-floating white-text btn-flat btn-large center red " href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                    <i className="material-icons">play_arrow</i>
+                                    {/* <img width="30px" style={{
+                                        marginTop:"15px"
+                                    }} src="./../../../../assets/Aurora_icons/Instagram logo.svg" alt="ig"/> */}
+                                </a>
+                            </div>
+                            <div className="col s2 center">
+                                <a className=" btn-floating white-text btn-flat btn-large center  deep-orange darken-4 " href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                    <i className="material-icons">mail_outline</i>
+                                    {/* <img width="30px" style={{
+                                        marginTop:"15px"
+                                    }} src="./../../../../assets/Aurora_icons/Instagram logo.svg" alt="ig"/> */}
+                                </a>
+                            </div>
+                            <div className="col s2 center">
+                                <a className=" btn-floating white-text btn-flat btn-large center  blue darken-4" href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                    <img width="30px" style={{
+                                        marginTop:"15px"
+                                    }} src="./../../../../assets/Aurora_images/svg/linkdln.svg" alt="ig"/>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     {/* <div className="row">
                         <div className="col s12 m3 l3"></div>

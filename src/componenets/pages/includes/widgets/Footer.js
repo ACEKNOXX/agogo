@@ -23,7 +23,8 @@ export default function Footer() {
                         <h6 className="white-text" style={{fontSize:"25px"}}> <b>Quick links</b>  </h6>
                         <div className="mt-25 footer-nav">
                             <Link to="/" className="white-text"><h6 className="white-text">Home</h6> </Link>
-                            <Link to="/explore" className="white-text"><h6 className="white-text">Explore</h6> </Link>
+                            {/* <Link to="/explore" className="white-text"><h6 className="white-text">Explore</h6> </Link> */}
+                            <Link to="/eventGallery" className="white-text"><h6 className="white-text">Event Gallery</h6> </Link>
                             <Link to="/blog" className="white-text"><h6 className="white-text">Blog</h6> </Link>
                             <Link to="/" className="white-text"><h6 className="white-text">Community</h6> </Link>
                             <Link to="/about" className="white-text"><h6 className="white-text">About Us</h6> </Link>
