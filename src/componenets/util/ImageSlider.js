@@ -17,11 +17,16 @@ export default function ImageSlider(props)
     // ]
 
     return (
-        <Carousel >
-            {
-                items.map( (item, i) => <Item key={i} item={item} /> )
-            }
-        </Carousel>
+        <div style={{
+            // minheight:"400px"
+        }}>
+            <Carousel >
+                {
+                    items.map( (item, i) => <Item key={i} item={item} /> )
+                }
+            </Carousel>
+        </div>
+        
     )
 }
 

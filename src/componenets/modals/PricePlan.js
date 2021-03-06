@@ -39,7 +39,7 @@ export default function PricePlan() {
        
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title" className="center" style={{width:"90% !important"}}>
-                    <h4 className="center">Pick Link  Plan</h4>
+                    <h4 className="center">Financial Club</h4>
                     <small className="center">Enjoy unlimited learning experience</small>
         </DialogTitle>
         <DialogContent>
@@ -136,9 +136,9 @@ export default function PricePlan() {
         </DialogContent>
         <DialogActions>
           
-          {/* <Button onClick={handleClose} color="primary">
-            Forget Password
-          </Button> */}
+          <Button className="center" onClick={handleClose} color="primary">
+            Close
+          </Button>
         </DialogActions>
       </Dialog>
     </div>

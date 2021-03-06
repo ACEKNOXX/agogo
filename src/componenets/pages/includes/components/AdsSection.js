@@ -11,7 +11,7 @@ const [loading, setLoading] = useState(false)
     useEffect(() => {
         setLoading(true)
 
-        firestore.collection("adverts").get().then((item) => {
+        firestore.collection("adverts").where("status", "==", true).get().then((item) => {
            const items = item.docs.map((doc) => doc.data())
             setCourses(items)
             // setCourses(itms)
@@ -40,6 +40,7 @@ const [loading, setLoading] = useState(false)
                         ""
                     }
                     {courses.length > 0 &&
+                        
                         <ImageSlider items={courses}/>
                     }
                                       

@@ -110,9 +110,14 @@ export default function Sidebar() {
             <ListItemText primary={'Home'} />
           </Link>
         </ListItem>
-        <ListItem button key={'Explore'}>
+        {/* <ListItem button key={'Explore'}>
           <Link to="/explore" className="black-text">
             <ListItemText primary={'Explore'} />
+          </Link>
+        </ListItem> */}
+        <ListItem button key={'Explore'}>
+          <Link to="/eventGallery" className="black-text">
+            <ListItemText primary={'Event Gallery'} />
           </Link>
         </ListItem>
         <ListItem button key={'Blog'}>

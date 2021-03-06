@@ -40,8 +40,8 @@ export default function PriceCalculator() {
             var t = timePer.current.value
             const interest = (p * r * t) / 100
             si = interest
-            console.log(interest)
-            alert(si)
+            // console.log(interest)
+            // alert(si)
             setSis(si)
         } catch (e) {
             
