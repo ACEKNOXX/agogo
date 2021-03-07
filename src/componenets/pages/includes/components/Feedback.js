@@ -16,12 +16,12 @@ export default function Feedback() {
         <div className=" pt-50 full-w" id="feedbacks">
             <div className="row hide-on-med-and-down">
                 <div className="pb-25 center section-heading student-comment-heading " id="student-heading">
-                    <h4 className="primary-color">With <span className="red-text"> ❤ </span>from Aurora students</h4>
+                    <h4 className="primary-color">With <span className="red-text"> ❤ </span>from Aurora tribers</h4>
                 </div>
             </div>
             <div className="row show-on-medium-and-down hide-on-med-and-up">
                 <div className="col s12 pb-25 center section-heading student-comment-heading " >
-                    <h4 className="primary-color">With <span className="red-text"> ❤ </span>from Aurora students</h4>
+                    <h4 className="primary-color">With <span className="red-text"> ❤ </span>from Aurora tribers</h4>
                 </div>
             </div>
 
