@@ -131,9 +131,17 @@ export default function ContactBody() {
                                 <a className=" btn-floating  btn-flat btn-large center 
                                  grey lighten-2"
                                     href="https://www.linkedin.com/in/aurora-financial-literacy-with-kwo-6319201a3">
-                                    <img width="30px" style={{
+                                    {/* <img width="30px" style={{
                                         marginTop:"15px"
-                                    }} src="./../../../../assets/Aurora_images/svg/linkdln.svg" alt=""/>
+                                    }} src="./../../../../assets/Aurora_images/svg/linkdln.svg" alt="imn"/> */}
+                                    <h4 style={{
+                                        textTransform: "none",
+                                        marginTop:"-30px"
+                                    }}>
+                                        <b>                 
+                                            in
+                                        </b>
+                                    </h4>
                                 </a>
                             </div>
                         </div>

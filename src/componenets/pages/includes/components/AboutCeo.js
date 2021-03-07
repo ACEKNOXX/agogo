@@ -64,7 +64,7 @@ export default function AboutCeo() {
                             width="300px" height="430px" alt="" />
                     </div>
                         <div className="col s12 m5 mt-25 center " style={{ margin:" 0px auto !important" }}>
-                        <h3 className="white-text ">Meet the CEO</h3>
+                        <h3 className="white-text ">Meet the Convener</h3>
                         
                         <p className="grey-text text-lighten-4 mt-50" >
                                 Kehinde is a seasoned Finance professional and a strong player in the Treasury 
