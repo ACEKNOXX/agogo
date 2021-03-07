@@ -84,28 +84,33 @@ export default function ContactBody() {
                         <div className="col s12 ">
                             
                             <div className="col s2 center">
-                                <a className=" btn-floating white-text btn-flat btn-large center pink " href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                <a className=" btn-floating white-text btn-flat btn-large center pink "
+                                    href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
                                     <img width="30px" style={{
                                         marginTop:"15px"
                                     }} src="./../../../../assets/Aurora_images/svg/instagram.svg" alt="ig"/>
                                 </a>
                             </div>
                             <div className="col s2 center">
-                                <a className=" btn-floating white-text btn-flat btn-large center blue " href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                <a className=" btn-floating white-text btn-flat btn-large center blue "
+                                    href="https://twitter.com/aurorafinancia1?s=11">
                                     <img width="30px" style={{
                                         marginTop:"15px"
                                     }} src="./../../../../assets/Aurora_images/svg/twitter.svg" alt="ig"/>
                                 </a>
                             </div>
                             <div className="col s2 center">
-                                <a className=" btn-floating white-text btn-flat btn-large center blue darken-1 " href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                <a className=" btn-floating white-text btn-flat btn-large center 
+                                blue darken-1 "
+                                    href="https://m.facebook.com/aurorafinancialliteracywithkwo/?ref=page_internal&mt_nav=0">
                                     <img width="15px" style={{
                                         marginTop:"15px"
                                     }} src="./../../../../assets/Aurora_images/svg/facebook.svg" alt="ig"/>
                                 </a>
                             </div>
                             <div className="col s2 center">
-                                <a className=" btn-floating white-text btn-flat btn-large center red " href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                <a className=" btn-floating white-text btn-flat btn-large center red "
+                                    href="https://bit.ly/3s8133a">
                                     <i className="material-icons">play_arrow</i>
                                     {/* <img width="30px" style={{
                                         marginTop:"15px"
@@ -113,7 +118,9 @@ export default function ContactBody() {
                                 </a>
                             </div>
                             <div className="col s2 center">
-                                <a className=" btn-floating white-text btn-flat btn-large center  deep-orange darken-4 " href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                <a className=" btn-floating white-text btn-flat btn-large center  
+                                        deep-orange darken-4 "
+                                    href="aurorafinancialliteracyhub@gmail.com">
                                     <i className="material-icons">mail_outline</i>
                                     {/* <img width="30px" style={{
                                         marginTop:"15px"
@@ -121,10 +128,12 @@ export default function ContactBody() {
                                 </a>
                             </div>
                             <div className="col s2 center">
-                                <a className=" btn-floating white-text btn-flat btn-large center  blue darken-4" href=" https://instagram.com/aurorawithkwo?igshid=1lhd9gr3g5lw9">
+                                <a className=" btn-floating  btn-flat btn-large center 
+                                 grey lighten-2"
+                                    href="https://www.linkedin.com/in/aurora-financial-literacy-with-kwo-6319201a3">
                                     <img width="30px" style={{
                                         marginTop:"15px"
-                                    }} src="./../../../../assets/Aurora_images/svg/linkdln.svg" alt="ig"/>
+                                    }} src="./../../../../assets/Aurora_images/svg/linkdln.svg" alt=""/>
                                 </a>
                             </div>
                         </div>

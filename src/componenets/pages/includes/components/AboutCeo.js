@@ -10,7 +10,7 @@ export default function AboutCeo() {
                         <img className="mt-50 pl-100" src="assets/Aurora_images/11.jpeg" style={{borderRadius:"10px !important"}} height="500px" alt="" />
                     </div>
                     <div className="col s12 m6 mt-25 ">
-                        <h3 className="white-text">Meet the CEO</h3>
+                        <h3 className="white-text">Meet the Convener</h3>
                         <p className="grey-text text-lighten-4 mt-50" >
                                 Kehinde is a seasoned Finance professional and a strong player in the Treasury 
                                 Management space with over 21 years banking experience spanning Treasury , 

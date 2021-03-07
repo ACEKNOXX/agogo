@@ -86,6 +86,7 @@ export default function GalleryBody() {
         firestore.collection("adverts").where("status", "==", true).get().then((item) => {
           var i = 0; 
           const items = item.docs.map((doc) => doc.data())
+          
           console.log(i) 
           i++;
           var tm={
@@ -96,10 +97,11 @@ export default function GalleryBody() {
           }
           setItem(items)
           console.log(i)
+
             // setItem(itms)
-            console.log("t---",items)
+          console.log("t---",items)
             // console.log(item.data().status)
-             
+          
           
            if (items.length == 0) {
                 setIsEmpti(true)
