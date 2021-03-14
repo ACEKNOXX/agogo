@@ -1,0 +1,68 @@
+ .top-navi-icons{
+display:flex;
+justify-content:start;
+}
+.collection{
+    border-radius:10px;
+}
+#navi-icons{
+    width:50px !important;
+    height:55px !important;
+    padding-top:20px !important;
+}
+#notifications-snippets-card{
+    padding:8px !important; 
+}
+#notifications-snippets-card>ul,
+#notifications-snippets-card>ul>li{    
+    border:none;
+    
+}
+.form-section-1>.col {
+padding-top:0px !important;
+}
+.form-section-1>.col>input{
+    font-size:15px !important;
+    border:1px solid grey;
+    padding:2px 0px 8px 5px;
+    border-radius:5px;
+}
+#submit-btn{
+    background:var(--secondary) !important;
+    border-radius:8px;
+}
+#edit-btn{
+    border-radius:20px !important;
+}
+#profile-account-collection{
+    border-radius:10px;
+
+}
+.course-cards>.card-image>img{
+border-radius:20px 20px 0px 0px;
+/* border:2px dashed red; */
+
+}
+.course-cards>.card-content>.card-heading>.card-context-head-stats{
+    width:210px; 
+    display:flex;
+    justify-content:space-between;
+    /* border:2px dashed red; */
+}
+.card-context-body-details{
+    padding-top:20px;padding-bottom:25px;min-height:800px;
+    /* border:2px dashed red; */
+
+}
+textarea,.materialize-textarea{
+    font-size:15px !important; 
+    border:1px solid grey !important;
+    padding:2px 8px !important;
+    border-radius:5px !important;
+    height:200px !important;
+}
+
+.dashboard-sidebar .collection {
+    border-radius: 0px !important;
+}
+.modal { width: 75% !important ; max-height: 100% !important }

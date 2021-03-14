@@ -12,7 +12,7 @@ export default function Sidebar() {
                 </Link>
             </div>
             <div className="dashboard-sidebar">
-                <ul className="collection">
+                <ul className="collection container">
                     <li className="collection-item active">
                         <img src="./../../../assets/Aurora_images/svg/docs.svg" alt="" />
                         <span className="title white-text p-2">Home</span>

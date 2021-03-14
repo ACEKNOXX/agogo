@@ -9,9 +9,9 @@ import './../css/style.css'
 import './../css/style2.css'
 import MyCoursesWidget from './../includes/widget/MyCourses'
 
+
 export default function MyCourses() {
     const { currentUser } = useAuth();
-
     return (
         <div>
                 <Header />

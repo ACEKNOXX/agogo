@@ -139,6 +139,7 @@ export default function AddCourse(props) {
             fullScreen={fullScreen}
             open={open}
             onClose={handleClose}
+            scroll={"body"}
             aria-labelledby="responsive-dialog-title"
           >
         <form onSubmit={handleSubmit}>
