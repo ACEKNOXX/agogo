@@ -29,7 +29,7 @@ export default function BlogArticle(props) {
             setLoading(false)
         }).catch((e) => {
             
-            console.log("error from snapshot",e)
+            console.log("error from snapshot",e.message)
         })
     },[])
     return (

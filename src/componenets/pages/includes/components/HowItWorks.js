@@ -1,5 +1,5 @@
 import React from 'react'
-import PricePlan from './../../../modals/PricePlan'
+import PricePlan from '../../../modals/PricePlan'
 
 export default function HowItWorks() {
     return (

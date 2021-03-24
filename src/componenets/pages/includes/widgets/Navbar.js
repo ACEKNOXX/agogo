@@ -8,7 +8,7 @@ import Dialog from '@material-ui/core/Dialog';
 import Login from "./../../../auth/Login";
 import Signup from "./../../../auth/Signup";
 import Sidebar from './Sidebar'
-import PriceCalculator from './../../../modals/PriceCalculator'
+import PriceCalculator from '../../../modals/PriceCalculator'
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {

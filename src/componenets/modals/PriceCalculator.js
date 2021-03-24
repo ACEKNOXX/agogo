@@ -2,7 +2,7 @@ import React, { useRef, useState,useEffect } from 'react';
 
 import Button from '@material-ui/core/Button';
 import { Link,useHistory } from 'react-router-dom'
-import { useAuth } from '../../context/AuthContext'
+import { useAuth } from './../../context/AuthContext'
 import './../css/App.css'
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
