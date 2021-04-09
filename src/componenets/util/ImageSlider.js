@@ -18,7 +18,8 @@ export default function ImageSlider(props)
 
     return (
         <div style={{
-            // minheight:"400px"
+            minHeight: "400px",
+            // border:"3px dashed red"
         }}>
             <Carousel >
                 {

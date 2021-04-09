@@ -29,7 +29,7 @@ const [loading, setLoading] = useState(false)
     }, [])
     return (
         <div>
-            <div className="row grey lighten-3">
+            <div className="row ">
                 <div className="col s12 m3"></div>
                 <div className="col s12 m6 center">
                    
