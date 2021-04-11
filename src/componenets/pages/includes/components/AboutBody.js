@@ -10,7 +10,7 @@ export default function AboutBody() {
                         
                         <div className="col s12 m6 ">
                             <img src="assets/Aurora_images/About us page image 2-min.png" 
-                            className="responsive-img full-w materialboxed hide-on-med-and-down" style={{margin:"0px 0px -20px -12px"}}  width="100%"    alt="" />
+                            className="responsive-img full-w materialboxed show-on-medium show-on-large hide-on-small-only" style={{margin:"0px 0px -20px -12px"}}  width="100%"    alt="" />
                         </div>
                         <div className="col s12 m6">
                             <div className="container ">

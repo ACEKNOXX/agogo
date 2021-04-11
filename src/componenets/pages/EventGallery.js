@@ -9,13 +9,9 @@ export default function Explore() {
         <div>
             <Navbar />
             <GalleryBanner />
-            <div className="hide-on-med-down row">
+            <div className=" row">
                 
-                <div className="col s12 m6">
-                    <GalleryBody />         
-                </div>
-
-                <div className="col s12 m6">
+                <div className="col s12">
                     <GalleryBody />         
                 </div>
 

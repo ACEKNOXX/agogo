@@ -9,16 +9,16 @@ export default function IndexBanner() {
                 <div className="container container-flux">
 
                     <div className="banner-row-one  full-w row  pt-50 ">
-                        <div className="col s12  m6 ">
+                        <div className="col s12  m6 l6 ">
                             <div className="">
                                 <div className="banner-index-holder">
                                     <div style={{lineHeight:"1.3"}} className="white-text index-banner-header" > 
-                                        FINANCIAL PLANNING WITH  
+                                        FINANCIAL PLANNING WITH 
                                         <span>
                                             <i> Aurora</i>
                                         </span> 
                                     </div>
-                                    <article className="grey-text text-lighten-5 index-banner-header-article">
+                                    <article className="grey-text text-lighten-5 index-banner-header-article hide-on-med-only">
                                         Aurora helps you to make smart financial decisions by offering lessons and training on the intricacies of finance. Learn on Aurora and connect with several other people who use our resources to up their financial game.
                                     </article>
                                     <br/>
@@ -29,9 +29,12 @@ export default function IndexBanner() {
                                 
                             </div>
                         </div>
-                        <div className="col s12 m6 right" >
-                            <div className="home-page-banner-image ">
+                        <div className="col s12 m6 l6 right" >
+                            <div className="home-page-banner-image hide-on-med-only hide-on-small-only">
                                 <img src="assets/Aurora_images/homepage hero image-min.png" width="100%" height="100%" alt="" />
+                            </div>
+                            <div className="home-page-banner-image show-on-medium show-on-medium hide-on-small-only hide-on-large-only">
+                                <img src="assets/Aurora_images/homepage hero image-min.png" width="100%" height="80%" alt="" />
                             </div>
                         </div>
                     </div>

@@ -8,17 +8,16 @@ export default function Footer() {
     <footer>
         <div className="footer  bg-primary" >
             <div className="container row">
-                <div className="col mt-50  s12  m3 hide-on-med-and-down">
+                <div className="col mt-50  s12  m12 l3 hide-on-med-and-down">
                 <img className="mt-50" src="assets/logos/logo white version.svg" alt="" />
                 </div>
                 <div className="col s12 mt-50 show-on-medium-and-down hide-on-med-and-up">
                     <h6 className="white-text" style={{ fontSize: "22px" }}> Subscribe to mailing list </h6>
                     <Subscribe />    
                 
-                
                 </div>
                 
-                <div className="col mt-50  s12  m6">
+                <div className="col mt-50  s12 l6 m12">
                     <div className="col s12 m4">
                         <h6 className="white-text" style={{fontSize:"25px"}}> <b>Quick links</b>  </h6>
                         <div className="mt-25 footer-nav">
@@ -51,12 +50,12 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="col m3  s12 mt-50 hide-on-med-and-down">
+                <div className="col m3 l3 s12 mt-50 hide-on-med-and-down">
                     <h6 className="white-text" > Subscribe to mailing list </h6>
                     <Subscribe />
                     
                 </div>
-                <div className="col s12  m3 show-on-medium-and-down hide-on-med-and-up">
+                <div className="col s12  m12 l3 show-on-medium-and-down hide-on-med-and-up">
                     <img className="mt-25" src={"assets/logos/logo white version.svg"} alt="" />
                     <div className="col  s12"></div>
                 </div>
@@ -74,7 +73,7 @@ export default function Footer() {
                         </small>
                     </div>
                     <div className="col s12 m6">
-                        <div className="row">
+                        <div className="row mt-50">
                             <div className="col s8"></div>
                             <div className="col s1 ">
                                 <Link to="/" className="grey-text text-lighten-4 mlr-2 right">

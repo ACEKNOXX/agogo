@@ -17,7 +17,7 @@ export default function Subscribe() {
                         padding:"2px 8px",borderRadius:"5px",color:"#eee !important"
                     }}
                 required/>
-            
+            <br/>
             <button type="submit" className="btn-flat
                      btn-primary transparent waves-effect white-text waves-light btn modal-trigger"
                                 style={{ height: "45px", borderRadius: "8px" }}>

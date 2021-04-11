@@ -39,23 +39,22 @@ function Item(props)
     return (
         <div className="center">
             
-            {/* <img src={props.item.url} width="100%"  alt=""/>
-            <h4>{props.item.title}</h4> */}
-            {/* <p>{props.item.description}</p> */}
-            <div className=" row mb-25  container" id="feedback-tab" >
-                <div className="col  s12 center m3">
-                    <div className="img-avatar" >
-                        <img className="" src="assets/Aurora_images/Ellipse 19-min.png"  width="100px" height="100px"  alt="" />
+            <div className="col s12">
+                <div className=" row mb-25  container" id="feedback-tab" >
+                    <div className="col  s12 center m3">
+                        <div className="img-avatar" >
+                            <img className="" src="assets/Aurora_images/Ellipse 19-min.png"  width="100px" height="100px"  alt="" />
+                        </div>
+                        <h6> <b>{ props.item.name}</b> </h6>
+                        <small>Student</small>
                     </div>
-                    <h6> <b>{ props.item.name}</b> </h6>
-                    <small>Student</small>
+                    <div className="col  s12 m7">
+                        <article className="pt-50">
+                            {props.item.description}
+                        </article>
+                    </div>
+                    <div className="col  s12 m2"></div>
                 </div>
-                <div className="col  s12 m7">
-                    <article className="pt-50">
-                        {props.item.description}
-                    </article>
-                </div>
-                <div className="col  s12 m2"></div>
             </div>
             <br/>
         </div>

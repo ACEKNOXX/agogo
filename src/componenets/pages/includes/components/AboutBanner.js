@@ -31,7 +31,7 @@ export default function AboutBanner() {
                     </div>
                     <div className="col s12 m6 "></div>
                 </div>
-                <div className="about-hero-content pt-100  row container full-w hide-on-med-and-down">
+                <div className="about-hero-content pt-100  row container full-w hide-on-small-only show-on-medium show-on-large">
                     <div className="col mt-120 s12 m6">
                         <h4 className="white-text center" style={{marginLeft:"-20px"}}>
                             Get to know about Aurora
@@ -43,7 +43,13 @@ export default function AboutBanner() {
                             <div className="col s4"></div>
                             <div className="col  s2 pink" style={{ height: "15px" }}></div>
                         </div> */}
-                        <div className=" mt-25 pl-100   white-text">
+                        <div className=" mt-25 pl-100 hide-on-med-only show-on-large show-on-small   white-text">
+                            <article>
+                                The whole idea of Aurora Financial Literacy with KWO is to share with people how you can grow investments, savings or other source of income . Financial literacy is about unlearning our old habits and learning new ones a lot of us need to take 
+                                a step back to refocus and get our finances back in order.
+                            </article>
+                            </div>
+                        <div className=" mt-25  pl-50 show-on-medium hide-on-large-only hide-on-small-only white-text">
                             <article>
                                 The whole idea of Aurora Financial Literacy with KWO is to share with people how you can grow investments, savings or other source of income . Financial literacy is about unlearning our old habits and learning new ones a lot of us need to take 
                                 a step back to refocus and get our finances back in order.
