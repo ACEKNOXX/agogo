@@ -6,7 +6,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 // import Button from '@material-ui/core/Button';
 import { useAuth } from './../../context/AuthContext'
 import { makeStyles } from '@material-ui/core/styles';
-import AboutCeo from './includes/components/AboutCeo'
+import AboutCeo2 from './includes/components/AboutCeo2'
 import Footer from './includes/widgets/Footer'
 import Feedback from './includes/components/Feedback'
 import HowItWorks from './includes/components/HowItWorks'
@@ -60,7 +60,7 @@ export default function Home() {
             <AdsSection />
             {/* <DashboardSnippet /> */}
             <LittleAbout />
-            <AboutCeo />
+            <AboutCeo2 />
             <Feedback />
             <Footer />
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -4,7 +4,9 @@ import { Link} from 'react-router-dom'
 export default function LittleAbout() {
     return (
         <div>
-            <div className="about  full-w" >
+            <div className="about  full-w" style={{
+                marginBottom:"-20px"
+            }}>
                 <div className="row show-on-large hide-on-med-only hide-on-small-only">
                     <div className="col s12 m6 ">
                         <img src="assets/Aurora_images/About us page image 2-min.png" 
@@ -23,7 +25,7 @@ export default function LittleAbout() {
                                     <p className=" alittle-text grey-text">
                                         The whole idea of Aurora Financial Literacy with KWO is to share with people how you can grow investments, savings or other source of income . Financial literacy is about unlearning our old habits and learning new ones...
                                     </p><br/>
-                                    <Link to="/" className="green-text">
+                                    <Link to="/" className="green-text ">
                                         Read more
                                     </Link>
                                 </div>

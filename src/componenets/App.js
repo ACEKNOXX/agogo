@@ -37,7 +37,7 @@ import SignupPage from './auth/SignupPage'
 import TermsAndConditions from './pages/TermsAndConditions'
 import Contact from './pages/Contact'
 import EventGallery from './pages/EventGallery'
-
+import AddToGallery from './admin/pages/Gallery'
 
 export default class App extends Component {
     render() {
@@ -74,10 +74,11 @@ export default class App extends Component {
                   <PrivateRoute path="/adminBlogPanel" component={AdminBlogPanel} />
                   <PrivateRoute path="/adminAddBlogArticle" component={AddBlogArticle} />
                   <PrivateRoute path="/adminAddCourseItem/:id" component={AddCourseItem} />
+                  <PrivateRoute path="/adminAddToGallery" component={AddToGallery} />
                   <PrivateRoute path='/richtext' component={RichTextBox} />
                 </Switch>
               </AuthProvider>
-            </Router>
+            </Router>o
           </AuthProvider>
         )
     }

@@ -58,6 +58,15 @@ export default function Sidebar() {
                             </Link>
                         </Link>
                     </li>
+                    <li className="collection-item ">
+                        <Link to="/adminAddToGallery" className="modal-trigger white-text">
+                            <img src="assets/svg/docs_sidebar.svg" alt="" />
+                            <span className="title ">Gallery</span>
+                            <Link to="" className="secondary-content">
+                                <img src="assets/svg/dot.svg" alt="" />
+                            </Link>
+                        </Link>
+                    </li>
 
                     <img src="../assets/Aurora_icons/bin.svg" alt="" />
                 </ul>
@@ -72,7 +81,8 @@ export default function Sidebar() {
                                     <img src="../assets/svg/dot.svg" alt="" />
                                 </Link>
                             </Link>
-                        </li>
+                            </li>
+                            
                     </ul>
                 </div>
         </div>
