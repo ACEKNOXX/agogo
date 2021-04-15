@@ -10,6 +10,7 @@ import './../css/style.css'
 import './../css/style2.css'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import UploadImageToGallery from './../modals/UploadImageToGallery'
+import GalleryTable from './../includes/widget/GalleryTable'
 
 
 export default function AddToGallery() {
@@ -17,19 +18,7 @@ export default function AddToGallery() {
     const [courses,setCourses] = useState([])
     
     
-    useEffect(() => {
-        firestore.collection("blogArticle").get().then((item) => {
-            setLoading(true)
-            const items = item.docs.map((doc) => doc)
-            setCourses(items)
-            console.log(items)
-            // setCourses(itms)
-            setTimeout( ()=>{ }, 5000)
-            setLoading(false)
-        }).catch((e) => {
-            console.log("error from snapshot",e)
-        })
-    },[])
+    
     return (
         <div>
              <Header />
@@ -59,6 +48,9 @@ export default function AddToGallery() {
                                         </Link> */}
                                         <UploadImageToGallery />
                                     </div>
+                                </div>
+                                <div className="row">
+                                    <GalleryTable/>
                                 </div>
                             </div>
                         </div>

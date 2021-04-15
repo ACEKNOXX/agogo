@@ -5,17 +5,18 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import { firestore } from '../../../firebase'
+import { storage,firestore } from '../../../firebase'
 import { useHistory } from 'react-router-dom';
 
 export default function DeleteAds(props) {
         const history = useHistory()
     const [loading, setLoading] = useState(false)
-
-        const courseId=props.courseId
-            console.log("coourseId==", courseId)
+  const datas = props.datas
+  const fileNam = datas.fileName
+        const courseId=datas.courseId
+        // console.log("coourseId==", courseId)
         var courseDocId;
-        if (props.courseId==null) {
+        if (courseId==null) {
             console.log("omom we  get null data")
         } else {
             courseDocId = courseId
@@ -28,8 +29,17 @@ export default function DeleteAds(props) {
     const handleAgree = async () => {
         setLoading(true)
         try {
-            await firestore.collection("adverts").doc(courseDocId).delete()
-            console.log("course deleted")
+            await firestore.collection("gallery").doc(courseDocId).delete()
+          var desertRef = storage.ref().child('gallery/'+fileNam);
+
+          // Delete the file
+          desertRef.delete().then(() => {
+            // File deleted successfully
+            console.log("image deleted")
+
+          }).catch((error) => {
+            // Uh-oh, an error occurred!
+          });
             handleClose()
             history.push("/admin")
         } catch (error) {
@@ -55,7 +65,7 @@ export default function DeleteAds(props) {
         <DialogTitle id="alert-dialog-title">{"Are you sure you want to delete this course?"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Note: After deleting curse , this course cannot be retreived.
+            Note: After deleting curse ,,,,this course cannot be retreived.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

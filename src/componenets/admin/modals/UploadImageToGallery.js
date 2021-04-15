@@ -12,6 +12,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import { storage,firestore } from './../../../firebase'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,29 +52,45 @@ export default function UploadImageToGallery() {
             // setMediapath(e.target.files[0].name)
             setImage(e.target.files[0])
         }
-    }
+  }
+  
+ 
 
-    const handleSubmit = async(e) => {
-        e.preventDefault();
-        
-       
-        if (passwordRef.current.value.length < 6 ) {
-            return setError('Password should be at-least 6 chars')
-        }
-        
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        // alert("djdj")
+        setLoading(true)
         try {
-            setError('')
-            setLoading(true)
-            await login(titleRef.current.value,passwordRef.current.value)
-            // history.push('/user')
-            history.push('/admin')
-          
-        } catch (e) {
-            console.log(e)
-            let errMsg = e.message;
-            setError(errMsg)
+            const upload = await storage.ref(`Gallery/${image.name}`).put(image)
+            
+            storage.ref(`Gallery/${image.name}`).getDownloadURL()
+            .then( async (url) => {
+                // `url` is the download URL for 'images/stars.jpg'
+
+                console.log("url", url)
+                var dataToPush = {
+                    "url": url,
+                    "title": titleRef.current.value,
+                    "fileName":image.name,
+                    "status": true,
+                    "image": true,
+                    "video":false
+                }
+                console.log(dataToPush)
+                await firestore.collection('gallery').doc().set(dataToPush)
+
+                history.push("/admin")
+            })
+            .catch((error) => {
+                // Handle any errors
+            })
+            
+            
+        } catch(err) {
+            console.log(err)
         }
         setLoading(false)
+        // console.log(imageRef.current.value)
     }
   return (
     <div>
@@ -125,6 +142,7 @@ export default function UploadImageToGallery() {
                                         type="file"
                                         // ref={imageRef}
                                         onChange={handleChange}
+                                        multiple
                                     />
                                     <label htmlFor="contained-button-file-image">
                                         <Button disableElevation variant="contained" className=" grey-text" component="span" style={{

@@ -1,12 +1,14 @@
 import React,{useState} from 'react'
-import DeleteAds from './../../modals/DeleteAds'
+import DeleteAds from '../../modals/DeleteAds'
+import DeleteGallery from '../../modals/DeleteGallery'
+
 import Button from '@material-ui/core/Button';
 import Switch from '@material-ui/core/Switch';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import { makeStyles } from '@material-ui/core/styles';
-import { storage, firestore } from './../../../../firebase'
-import { useAuth } from './../../../../context/AuthContext'
+import { storage, firestore } from '../../../../firebase'
+import { useAuth } from '../../../../context/AuthContext'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Link, useHistory } from 'react-router-dom'
 
@@ -37,32 +39,17 @@ export default function AdvertTableRow(props) {
         setState(!state);
     };
     // console.log(course)
-    const handelSwitch = async() => {
-        setLoading(true)
-        try {
-            await firestore.collection("adverts").doc(corse.id).update({
-                status:!state
-            }).then(() => {
-                // console.log("Document successfully updated!");
-                setLoading(true)
-                history.push("/admin")
-            })
-            .catch((error) => {
-                // The document probably doesn't exist.
-                console.error("Error updating document: ", error);
-            });
-            setLoading(true)
-        } catch (e) {
-            
-        }
-    }
+    
     return (
 
             <tr >
                 <td>
                     <p>
                     <label>
-                        <DeleteAds courseId={corse.id} />
+                        <DeleteGallery datas={{
+                            courseId: corse.id,
+                            fileName: course.fileName
+                        }}  />
                     </label>
                     </p>
                 </td>
@@ -86,21 +73,8 @@ export default function AdvertTableRow(props) {
                 </td> */}
                 <td>
                     <span>
-                        <Button disabled={loading} onClick={handelSwitch} className="green lighten-4" style={{margin:"0px 2px"}}>
-                            {/* <Link to={`/adminAddCourseItem/${corse.id}`} className="red btn-flat transparent"> */}
-                                {state &&
-                                    <h6 className="green-text">Active</h6>
-                                }
-                                
-                                {!state &&
-                                    <h6 className="red-text">Disabled</h6>
-                                }
-                                {loading &&
-                                    <CircularProgress disableShrink  />
-                                }
-                            {/* </Link> */}
-                        </Button>
                         
+                        {course.fileName}
                         
                     </span>
                 </td>

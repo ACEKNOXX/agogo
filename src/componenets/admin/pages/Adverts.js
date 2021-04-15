@@ -187,8 +187,8 @@ export default function Adverts() {
                                     </div>
                                     
                                 </div>
-                                
                                 <AdvertTable />
+                                
                                 {/* <!-- main body --> */}
                             
                             </div>
