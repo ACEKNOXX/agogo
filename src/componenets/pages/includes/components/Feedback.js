@@ -9,6 +9,10 @@ export default function Feedback() {
         {
             name: "Esther Kalu.",
             description: 'Thank you so much mama,  this savings group really helped us this year.I am extremely grateful and we wish we do more next year.'
+        },
+        {
+            name: "Georgie O.",
+            description: "Thank you KWO for all your work with us ! 🙏🏾 Thank you all my fellow jade aurora tribers for making this work seamlessly 🙏🏾."
         }
     ]
 
@@ -24,10 +28,12 @@ export default function Feedback() {
                     <h4 className="primary-color">With <span className="red-text"> ❤ </span>from Aurora tribers</h4>
                 </div>
             </div>
-
-            {
-                items.map( (item, i) => <Item key={i} item={item} /> )
-            }
+            <div className="row">
+                {
+                    items.map( (item, i) => <Item key={i} item={item} /> )
+                }
+            </div>
+            
             
 
         </div>
@@ -37,26 +43,21 @@ export default function Feedback() {
 function Item(props)
 {
     return (
-        <div className="center">
             
-            <div className="col s12">
-                <div className=" row mb-25  container" id="feedback-tab" >
-                    <div className="col  s12 center m3">
-                        <div className="img-avatar" >
-                            <img className="" src="assets/Aurora_images/Ellipse 19-min.png"  width="100px" height="100px"  alt="" />
-                        </div>
-                        <h6> <b>{ props.item.name}</b> </h6>
-                        <small>Student</small>
-                    </div>
-                    <div className="col  s12 m7">
-                        <article className="pt-50">
-                            {props.item.description}
-                        </article>
-                    </div>
-                    <div className="col  s12 m2"></div>
+        <div className="col s12 m4 l4 ">
+            <div className=" row   container" id="feedback-tab"  style={{minHeight:"280px"}}>
+                <div className="col  s12 center ">
+                    
+                    <h6> <b>{ props.item.name}</b> </h6>
                 </div>
+                <div className="col  s12 ">
+                    <article className="pt-50">
+                        {props.item.description}
+                    </article>
+                </div>
+                
             </div>
-            <br/>
         </div>
+        
     )
 }

@@ -27,7 +27,7 @@ export default function AboutCeo2() {
                                 of the Chartered Institute of Bankers Nigeria (CIBN) 
                                 as well as the Chartered Institute of Bankers Scotland and Wales.
                         </p>
-                        <Link to="/about" className="green-text btn">
+                        <Link to="/about" className="green-text ">
                             Read more
                         </Link>
                         

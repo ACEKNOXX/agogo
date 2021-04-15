@@ -81,9 +81,7 @@ const Navbar = () => {
                                  />
                         </div>
                     </li>
-                    {/* <li>
-                        <Link to="/explore"  className="grey-text text-darken-3">Explore</Link>
-                    </li> */}
+                   
                     <li>
                         <Link to="/eventGallery"  className="grey-text text-darken-3">Event Gallery</Link>
                     </li>
@@ -97,15 +95,9 @@ const Navbar = () => {
                         <Link to="/about" className="grey-text text-darken-3">About Us</Link>
                     </li>
                     <li>
-                        {/* <Link to="#modal-pricing"  className="grey-text text-darken-3  modal-trigger">Pricing calculator</Link> */}
                         <PriceCalculator />
                     </li>
-                    {/* <li>
-                        {!currentUser && 
-                             <Login />
-
-                        }
-                    </li> */}
+                    
                     {!currentUser && 
                     <li className="right" style={{
                             marginTop:"12px"
@@ -125,11 +117,7 @@ const Navbar = () => {
                         
                     
                     { currentUser && 
-                        // <li className="right">
-                        //     <Link to="/user" className="btn-floating btn-flat green center white-text " >
-                        //         <i className="material-icons">account_circle</i>
-                        //     </Link>
-                        // </li> 
+                        
                         <li className="right">
                             <Link to="/admin" className="btn-floating btn-flat green center white-text " >
                                 <i className="material-icons">account_circle</i>
@@ -149,27 +137,7 @@ const Navbar = () => {
             </div>
             </nav>
             
-            {/* <ul className="sidenav" id="mobile-demo">
-                <li><Link to="/" className="active">Home</Link></li>
-                <li><Link to="">Explore</Link></li>
-                <li><Link to="/">About</Link></li>
-                <li><Link to="/">Blog</Link></li>
-                <li><Link to="/">Community</Link></li>
-                <li>
-                    <Link to="#modal-pricing"  className="grey-text text-darken-3  modal-trigger">Pricing calculator</Link>
-                </li>
-                <li className="">
-                    <Link to="#modal1"   className=" btn-flat btn-primary btn-oultine btn-large  transparent modal-trigger">
-                        Login
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/"  type="button" data-target="modal-pricing-plan" className="btn-oultine modal-trigger btn-large btn-flat btn-large-primary white-text green">
-                        Join aurora 
-                    </Link>
-                </li>
-                
-            </ul> */}
+            
         </div>
     )
 }

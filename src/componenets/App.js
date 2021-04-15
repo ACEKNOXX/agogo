@@ -78,7 +78,7 @@ export default class App extends Component {
                   <PrivateRoute path='/richtext' component={RichTextBox} />
                 </Switch>
               </AuthProvider>
-            </Router>o
+            </Router>
           </AuthProvider>
         )
     }
